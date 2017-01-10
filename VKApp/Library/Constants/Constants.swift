@@ -13,7 +13,8 @@ struct Constants {
     
     struct API {
         static let AppId = "4933789"
-        static let UserScope = ["frineds","email"]
+        static let UserScope = "friends"
+        static let vkVersion = "5.62"
         static let BaseURL = ""
     }
 }

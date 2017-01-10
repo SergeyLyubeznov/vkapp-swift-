@@ -10,28 +10,42 @@ import UIKit
 
 class AuthViewController: UIViewController {
     
-    var success: ((_ token:String) -> (Void))?
+    var success: ((_ token:AccessToken) -> (Void))?
     var cancel: ((Void) -> (Void))?
+    
+    let authManager = AuthManager()
+    
+    @IBOutlet weak var webView:UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let request = authManager.request
+        webView.loadRequest(request() as URLRequest)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-}
-
-extension AuthViewController {
     
     @IBAction func cancelButtonPressed() {
         if cancel != nil  {
             cancel?()
-            dismiss(animated: true, completion: nil)
+            dissmisModal()
         }
     }
+}
+
+extension AuthViewController:UIWebViewDelegate {
+    
+    public func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+        let string = webView.request?.url?.absoluteString
+        
+        if string?.lowercased().range(of: "access_token") != nil {
+            
+            let accessToken = authManager.getAccessToken(path: string)
+            if success != nil {
+                success?(accessToken)
+                dissmisModal()
+            }
+        }
+    }
+    
 }

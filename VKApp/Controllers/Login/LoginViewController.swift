@@ -8,13 +8,10 @@
 
 import UIKit
 
-let skope:[String] = Constants.API.UserScope
-
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
     }
     
@@ -23,6 +20,7 @@ class LoginViewController: UIViewController {
         let authController:AuthViewController = segue.destination as! AuthViewController
         
         authController.success = {(token) in
+            print(token)
         }
         
         authController.cancel = {() in

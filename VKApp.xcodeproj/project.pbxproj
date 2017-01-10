@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		14AD70D3A85DCF5CB029C52A /* Pods_VKApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483D497921F7302641FB148 /* Pods_VKApp.framework */; };
+		2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8361E256EA200BAA219 /* AuthManager.swift */; };
+		2D77F8391E2570DF00BAA219 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8381E2570DF00BAA219 /* AccessToken.swift */; };
+		2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F83A1E25752300BAA219 /* UIViewController + Utils.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7981E2504EA002E64DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E78C1E2504EA002E64DB /* ViewController.swift */; };
@@ -16,15 +18,18 @@
 		2DE8E79B1E2504EA002E64DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7931E2504EA002E64DB /* Main.storyboard */; };
 		2DE8E79E1E251F18002E64DB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E79D1E251F18002E64DB /* LoginViewController.swift */; };
 		2DE8E7A21E251F90002E64DB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7A11E251F90002E64DB /* Login.storyboard */; };
-		2DE8E7A81E252FA3002E64DB /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8E7A71E252FA3002E64DB /* VK_ios_sdk.framework */; };
 		2DE8E7B01E253315002E64DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7AF1E253315002E64DB /* Constants.swift */; };
 		2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7B11E25448F002E64DB /* BaseAPI.swift */; };
 		2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8E7B31E2544B1002E64DB /* Alamofire.framework */; };
 		2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7B61E255363002E64DB /* AuthViewController.swift */; };
+		A7A3D5AF30369CC54FF1A8EC /* Pods_VKApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483D497921F7302641FB148 /* Pods_VKApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0483D497921F7302641FB148 /* Pods_VKApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D77F8361E256EA200BAA219 /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		2D77F8381E2570DF00BAA219 /* AccessToken.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessToken.swift; sourceTree = "<group>"; };
+		2D77F83A1E25752300BAA219 /* UIViewController + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController + Utils.swift"; sourceTree = "<group>"; };
 		2DE8E7731E250195002E64DB /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,14 +54,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */,
-				2DE8E7A81E252FA3002E64DB /* VK_ios_sdk.framework in Frameworks */,
-				14AD70D3A85DCF5CB029C52A /* Pods_VKApp.framework in Frameworks */,
+				A7A3D5AF30369CC54FF1A8EC /* Pods_VKApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D77F8351E256E8D00BAA219 /* AuthManager */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8361E256EA200BAA219 /* AuthManager.swift */,
+			);
+			path = AuthManager;
+			sourceTree = "<group>";
+		};
 		2DE8E76A1E250195002E64DB = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +131,7 @@
 		2DE8E78E1E2504EA002E64DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8381E2570DF00BAA219 /* AccessToken.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -168,6 +181,7 @@
 		2DE8E7AB1E253305002E64DB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8351E256E8D00BAA219 /* AuthManager */,
 				2DE8E7AC1E253305002E64DB /* API */,
 				2DE8E7AD1E253305002E64DB /* Base objects extensions */,
 				2DE8E7AE1E253305002E64DB /* Router */,
@@ -186,6 +200,7 @@
 		2DE8E7AD1E253305002E64DB /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F83A1E25752300BAA219 /* UIViewController + Utils.swift */,
 			);
 			path = "Base objects extensions";
 			sourceTree = "<group>";
@@ -351,11 +366,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DE8E79E1E251F18002E64DB /* LoginViewController.swift in Sources */,
+				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
 				2DE8E7981E2504EA002E64DB /* ViewController.swift in Sources */,
+				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
 				2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
 				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
 				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
+				2D77F8391E2570DF00BAA219 /* AccessToken.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
