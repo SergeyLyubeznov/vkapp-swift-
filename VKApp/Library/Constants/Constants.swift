@@ -1,0 +1,19 @@
+//
+//  Constants.swift
+//  VKApp
+//
+//  Created by Sergey Lyubeznov on 10/01/2017.
+//  Copyright © 2017 Sergey Lyubeznov. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+struct Constants {
+    
+    struct API {
+        static let AppId = "4933789"
+        static let UserScope = ["frineds","email"]
+        static let BaseURL = ""
+    }
+}

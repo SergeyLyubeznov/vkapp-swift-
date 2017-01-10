@@ -8,5 +8,6 @@ target 'VKApp' do
   # Pods for VKApp
   
   pod 'VK-ios-sdk'
+  pod 'Alamofire', '~> 4.0'
 
 end
