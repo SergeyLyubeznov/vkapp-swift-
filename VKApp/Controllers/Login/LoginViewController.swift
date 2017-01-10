@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +21,18 @@ class LoginViewController: UIViewController {
         
         authController.success = {(token) in
             print(token)
+            self.showMainController()
         }
         
         authController.cancel = {() in
             print("cancel auth")
         }
+    }
+    
+    private func showMainController () {
+        
+        let mainController = MainViewController.controller() as! MainViewController
+        present(mainController, animated: true, completion: nil)
     }
     
 }

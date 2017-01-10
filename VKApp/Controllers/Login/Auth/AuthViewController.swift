@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController: BaseViewController {
     
     var success: ((_ token:AccessToken) -> (Void))?
     var cancel: ((Void) -> (Void))?
@@ -42,8 +42,10 @@ extension AuthViewController:UIWebViewDelegate {
             
             let accessToken = authManager.getAccessToken(path: string)
             if success != nil {
-                success?(accessToken)
-                dissmisModal()
+                dismiss(animated: true, completion: { 
+                    self.success?(accessToken)
+                })
+                
             }
         }
     }
