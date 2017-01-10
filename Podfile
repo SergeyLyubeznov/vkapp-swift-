@@ -6,5 +6,7 @@ target 'VKApp' do
   use_frameworks!
 
   # Pods for VKApp
+  
+  pod 'VK-ios-sdk'
 
 end
