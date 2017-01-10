@@ -18,6 +18,9 @@
 		2DE8E7A21E251F90002E64DB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7A11E251F90002E64DB /* Login.storyboard */; };
 		2DE8E7A81E252FA3002E64DB /* VK_ios_sdk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8E7A71E252FA3002E64DB /* VK_ios_sdk.framework */; };
 		2DE8E7B01E253315002E64DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7AF1E253315002E64DB /* Constants.swift */; };
+		2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7B11E25448F002E64DB /* BaseAPI.swift */; };
+		2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8E7B31E2544B1002E64DB /* Alamofire.framework */; };
+		2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7B61E255363002E64DB /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		2DE8E7A11E251F90002E64DB /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		2DE8E7A71E252FA3002E64DB /* VK_ios_sdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VK_ios_sdk.framework; path = "../../../Library/Developer/Xcode/DerivedData/VKApp-ghmndtuiotrbxuajwrwtquparqvj/Build/Products/Debug-iphonesimulator/VK-ios-sdk/VK_ios_sdk.framework"; sourceTree = "<group>"; };
 		2DE8E7AF1E253315002E64DB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2DE8E7B11E25448F002E64DB /* BaseAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		2DE8E7B31E2544B1002E64DB /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/VKApp-ghmndtuiotrbxuajwrwtquparqvj/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		2DE8E7B61E255363002E64DB /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		F8E761CA5E970A1AD921B798 /* Pods-VKApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VKApp/Pods-VKApp.release.xcconfig"; sourceTree = "<group>"; };
 		FA8B9EF8DC72748168277ABF /* Pods-VKApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKApp/Pods-VKApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -42,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */,
 				2DE8E7A81E252FA3002E64DB /* VK_ios_sdk.framework in Frameworks */,
 				14AD70D3A85DCF5CB029C52A /* Pods_VKApp.framework in Frameworks */,
 			);
@@ -136,6 +143,7 @@
 		2DE8E79C1E251EA6002E64DB /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2DE8E7B51E25534E002E64DB /* Auth */,
 				2DE8E79D1E251F18002E64DB /* LoginViewController.swift */,
 				2DE8E7A11E251F90002E64DB /* Login.storyboard */,
 			);
@@ -170,6 +178,7 @@
 		2DE8E7AC1E253305002E64DB /* API */ = {
 			isa = PBXGroup;
 			children = (
+				2DE8E7B11E25448F002E64DB /* BaseAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -188,9 +197,18 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		2DE8E7B51E25534E002E64DB /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2DE8E7B61E255363002E64DB /* AuthViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		A797E73D610910FCE35107AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DE8E7B31E2544B1002E64DB /* Alamofire.framework */,
 				2DE8E7A71E252FA3002E64DB /* VK_ios_sdk.framework */,
 				0483D497921F7302641FB148 /* Pods_VKApp.framework */,
 			);
@@ -336,6 +354,8 @@
 				2DE8E7981E2504EA002E64DB /* ViewController.swift in Sources */,
 				2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
+				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
+				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
