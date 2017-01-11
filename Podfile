@@ -8,5 +8,6 @@ target 'VKApp' do
   # Pods for VKApp
   
   pod 'Alamofire', '~> 4.0'
+  pod 'SwiftyUserDefaults'
 
 end

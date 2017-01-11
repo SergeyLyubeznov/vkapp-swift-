@@ -1,12 +1,15 @@
 PODS:
   - Alamofire (4.0.1)
+  - SwiftyUserDefaults (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: bfa094207cb1dcfac70245b9e2a1ff70ad6c0865
+PODFILE CHECKSUM: 5fcca728c0b3fd3b7c32955703f3a1619e7993ae
 
 COCOAPODS: 1.1.1
