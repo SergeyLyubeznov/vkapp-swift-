@@ -27,8 +27,7 @@ class LoginViewController: BaseViewController {
             let token = AppManager.sharedInstance.accessToken
             
             if token.valid {
-                ApiManager.loadProfile()
-                showMainController()
+                self.loadProfileAndMoveToMain()
             }
         }
     }
@@ -40,13 +39,17 @@ class LoginViewController: BaseViewController {
         authController.success = {(token) in
             token.save()
             AppManager.sharedInstance.accessToken = token
-            ApiManager.loadProfile()
-            self.showMainController()
+            self.loadProfileAndMoveToMain()
         }
         
         authController.cancel = {() in
             print("cancel auth")
         }
+    }
+    
+    private func loadProfileAndMoveToMain() {
+        ApiManager.loadProfile()
+        showMainController()
     }
     
     private func showMainController () {

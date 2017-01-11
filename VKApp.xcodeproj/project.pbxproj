@@ -34,6 +34,8 @@
 		2D77F88C1E26AD8700BAA219 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F88B1E26AD8700BAA219 /* AlamofireObjectMapper.framework */; };
 		2D77F88E1E26ADB300BAA219 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F88D1E26ADB300BAA219 /* ObjectMapper.framework */; };
 		2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8901E26B3C600BAA219 /* ApiManager.swift */; };
+		2D77F8951E26EFDB00BAA219 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8941E26EFDB00BAA219 /* City.swift */; };
+		2D77F8971E26F02800BAA219 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8961E26F02800BAA219 /* Country.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		2D77F88B1E26AD8700BAA219 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/VKApp-ghmndtuiotrbxuajwrwtquparqvj/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
 		2D77F88D1E26ADB300BAA219 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/VKApp-ghmndtuiotrbxuajwrwtquparqvj/Build/Products/Debug-iphonesimulator/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
 		2D77F8901E26B3C600BAA219 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		2D77F8941E26EFDB00BAA219 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		2D77F8961E26F02800BAA219 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		2DE8E7731E250195002E64DB /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -267,6 +271,22 @@
 			path = ApiManager;
 			sourceTree = "<group>";
 		};
+		2D77F8921E26EFCC00BAA219 /* City */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8941E26EFDB00BAA219 /* City.swift */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		2D77F8931E26EFCC00BAA219 /* Country */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8961E26F02800BAA219 /* Country.swift */,
+			);
+			path = Country;
+			sourceTree = "<group>";
+		};
 		2DE8E76A1E250195002E64DB = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +349,8 @@
 		2DE8E78E1E2504EA002E64DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8921E26EFCC00BAA219 /* City */,
+				2D77F8931E26EFCC00BAA219 /* Country */,
 				2D77F8881E26AA1700BAA219 /* Profile */,
 				2D77F87D1E267B5A00BAA219 /* Base */,
 				2D77F8761E267AAF00BAA219 /* AccessToken */,
@@ -582,8 +604,10 @@
 				2D77F8521E259F8700BAA219 /* AddViewController.swift in Sources */,
 				2DE8E79E1E251F18002E64DB /* LoginViewController.swift in Sources */,
 				2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */,
+				2D77F8971E26F02800BAA219 /* Country.swift in Sources */,
 				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
 				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
+				2D77F8951E26EFDB00BAA219 /* City.swift in Sources */,
 				2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */,
 				2D77F8591E25A0BA00BAA219 /* DialoguesViewController.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
