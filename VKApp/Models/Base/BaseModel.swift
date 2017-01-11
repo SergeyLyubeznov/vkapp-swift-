@@ -7,11 +7,20 @@
 //
 
 import UIKit
+import ObjectMapper
 
-class BaseModel: NSObject {
+class BaseModel: NSObject, Mappable {
 
     var id: UInt = 0
     
     required override init() {
+    }
+    
+    required init?(map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        id <- map["id"]
     }
 }

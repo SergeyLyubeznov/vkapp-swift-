@@ -12,24 +12,33 @@ import Alamofire
 class BaseAPI: NSObject {
     
     var completion:((_ data:AnyObject?, _ erorr:Error?) -> Void)?
+    
+    var addAccessToken = true
 
     public func startRequest(completion:@escaping (_ data: AnyObject?,_ error:Error?) -> Void) {
         
         let method = self.method()
-        let parameters = self.parameters()
+        var parameters = self.parameters()
         let url = Constants.API.BaseURL + self.path()
         self.completion = completion
+        
+        if addAccessToken {
+            let token = AppManager.sharedInstance.accessToken
+            parameters["access_token"] = token.token
+        }
         
         Alamofire.request(url, method: method, parameters: parameters, headers: nil).responseJSON { response in
             
             if response.result.isSuccess {
-                self.apiDidReturnData(data: response.data as AnyObject)
+                
+                let dict = self.convertToDictionary(data: response.data!)
+                
+                self.apiDidReturnData(data: dict as AnyObject)
             } else {
                 self.apiDidReturnError(error: response.result.value as! Error)
             }
         }
     }
-    
     
     func apiDidReturnData(data:AnyObject) {
         if completion != nil {
@@ -54,5 +63,15 @@ class BaseAPI: NSObject {
     func path() -> String {
         return ""
     }
+    
+    func convertToDictionary(data: Data) -> [String: Any]? {
+            do {
+                return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            } catch {
+                print(error.localizedDescription)
+            }
+        return nil
+    }
+
     
 }

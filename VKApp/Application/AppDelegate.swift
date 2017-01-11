@@ -18,14 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        let meAPI = MeAPI()
-        meAPI.startRequest { (data, error) in
-            
-            if error == nil {
-                print(data)
-            }
-        }
-        
         return true
     }
 

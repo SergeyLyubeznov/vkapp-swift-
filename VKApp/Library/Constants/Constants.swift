@@ -15,7 +15,7 @@ struct Constants {
         static let AppId = "4933789"
         static let UserScope = "friends"
         static let vkVersion = "5.62"
-        static let BaseURL = "https://httpbin.org/"
-        static let MePath = "get"
+        static let BaseURL = "https://api.vk.com/method/"
+        static let MyProfile = "account.getProfileInfo"
     }
 }

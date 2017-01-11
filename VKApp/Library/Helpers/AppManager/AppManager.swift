@@ -11,6 +11,8 @@ import UIKit
 class AppManager: NSObject {
     internal static let sharedInstance = AppManager()
     
+    var profile:Profile?
+    
     var accessToken:AccessToken = { () -> AccessToken in
         let token = AccessToken()
         token.load()

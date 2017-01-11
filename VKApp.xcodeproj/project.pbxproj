@@ -29,7 +29,11 @@
 		2D77F87C1E267AAF00BAA219 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8791E267AAF00BAA219 /* TabBarItem.swift */; };
 		2D77F87F1E267B7000BAA219 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F87E1E267B7000BAA219 /* BaseModel.swift */; };
 		2D77F8811E267BAF00BAA219 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8801E267BAF00BAA219 /* User.swift */; };
-		2D77F8841E268A7300BAA219 /* MeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8831E268A7300BAA219 /* MeAPI.swift */; };
+		2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8861E26A31100BAA219 /* MyProfileAPI.swift */; };
+		2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8891E26AA2700BAA219 /* Profile.swift */; };
+		2D77F88C1E26AD8700BAA219 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F88B1E26AD8700BAA219 /* AlamofireObjectMapper.framework */; };
+		2D77F88E1E26ADB300BAA219 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F88D1E26ADB300BAA219 /* ObjectMapper.framework */; };
+		2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8901E26B3C600BAA219 /* ApiManager.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -68,7 +72,11 @@
 		2D77F8791E267AAF00BAA219 /* TabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		2D77F87E1E267B7000BAA219 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		2D77F8801E267BAF00BAA219 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		2D77F8831E268A7300BAA219 /* MeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeAPI.swift; sourceTree = "<group>"; };
+		2D77F8861E26A31100BAA219 /* MyProfileAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileAPI.swift; sourceTree = "<group>"; };
+		2D77F8891E26AA2700BAA219 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		2D77F88B1E26AD8700BAA219 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/VKApp-ghmndtuiotrbxuajwrwtquparqvj/Build/Products/Debug-iphonesimulator/AlamofireObjectMapper/AlamofireObjectMapper.framework"; sourceTree = "<group>"; };
+		2D77F88D1E26ADB300BAA219 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = "../../../Library/Developer/Xcode/DerivedData/VKApp-ghmndtuiotrbxuajwrwtquparqvj/Build/Products/Debug-iphonesimulator/ObjectMapper/ObjectMapper.framework"; sourceTree = "<group>"; };
+		2D77F8901E26B3C600BAA219 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		2DE8E7731E250195002E64DB /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +99,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D77F88E1E26ADB300BAA219 /* ObjectMapper.framework in Frameworks */,
+				2D77F88C1E26AD8700BAA219 /* AlamofireObjectMapper.framework in Frameworks */,
 				2D77F8751E263C6A00BAA219 /* SwiftyUserDefaults.framework in Frameworks */,
 				2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */,
 				A7A3D5AF30369CC54FF1A8EC /* Pods_VKApp.framework in Frameworks */,
@@ -228,9 +238,33 @@
 		2D77F8821E268A2F00BAA219 /* GET */ = {
 			isa = PBXGroup;
 			children = (
-				2D77F8831E268A7300BAA219 /* MeAPI.swift */,
+				2D77F8851E26A30300BAA219 /* MyProfileAPI */,
 			);
 			path = GET;
+			sourceTree = "<group>";
+		};
+		2D77F8851E26A30300BAA219 /* MyProfileAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8861E26A31100BAA219 /* MyProfileAPI.swift */,
+			);
+			path = MyProfileAPI;
+			sourceTree = "<group>";
+		};
+		2D77F8881E26AA1700BAA219 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8891E26AA2700BAA219 /* Profile.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		2D77F88F1E26B3B900BAA219 /* ApiManager */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8901E26B3C600BAA219 /* ApiManager.swift */,
+			);
+			path = ApiManager;
 			sourceTree = "<group>";
 		};
 		2DE8E76A1E250195002E64DB = {
@@ -295,6 +329,7 @@
 		2DE8E78E1E2504EA002E64DB /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8881E26AA1700BAA219 /* Profile */,
 				2D77F87D1E267B5A00BAA219 /* Base */,
 				2D77F8761E267AAF00BAA219 /* AccessToken */,
 				2D77F8781E267AAF00BAA219 /* TabBarItem */,
@@ -348,6 +383,7 @@
 		2DE8E7AB1E253305002E64DB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F88F1E26B3B900BAA219 /* ApiManager */,
 				2D77F8711E263AEA00BAA219 /* AppManager */,
 				2D77F8351E256E8D00BAA219 /* AuthManager */,
 				2DE8E7AC1E253305002E64DB /* API */,
@@ -392,6 +428,8 @@
 		A797E73D610910FCE35107AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F88D1E26ADB300BAA219 /* ObjectMapper.framework */,
+				2D77F88B1E26AD8700BAA219 /* AlamofireObjectMapper.framework */,
 				2D77F8741E263C6A00BAA219 /* SwiftyUserDefaults.framework */,
 				2DE8E7B31E2544B1002E64DB /* Alamofire.framework */,
 				2DE8E7A71E252FA3002E64DB /* VK_ios_sdk.framework */,
@@ -543,6 +581,7 @@
 				2D77F8621E25A1DA00BAA219 /* FriendsViewController.swift in Sources */,
 				2D77F8521E259F8700BAA219 /* AddViewController.swift in Sources */,
 				2DE8E79E1E251F18002E64DB /* LoginViewController.swift in Sources */,
+				2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */,
 				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
 				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
 				2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */,
@@ -555,10 +594,11 @@
 				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
 				2D77F87C1E267AAF00BAA219 /* TabBarItem.swift in Sources */,
 				2D77F87F1E267B7000BAA219 /* BaseModel.swift in Sources */,
+				2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */,
 				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
 				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,
-				2D77F8841E268A7300BAA219 /* MeAPI.swift in Sources */,
+				2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */,
 				2D77F85D1E25A0E400BAA219 /* ProfileViewController.swift in Sources */,
 				2D77F8541E259F8700BAA219 /* SettingsViewController.swift in Sources */,
 				2D77F8811E267BAF00BAA219 /* User.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  MeAPI.swift
+//  MyProfileAPI.swift
 //  VKApp
 //
 //  Created by Sergey Lyubeznov on 11/01/2017.
@@ -8,19 +8,23 @@
 
 import UIKit
 import Alamofire
+import ObjectMapper
 
-class MeAPI: BaseAPI {
-
+class MyProfileAPI: BaseAPI {
+    
     override func method() -> HTTPMethod {
         return .get
     }
     
     override func path() -> String {
-        return Constants.API.MePath
+        return Constants.API.MyProfile
     }
     
     override func apiDidReturnData(data: AnyObject) {
-        print (data)
+        
+        if let profile = Mapper<Profile>().map(JSONObject: data["response"] as! [String:AnyObject]) {
+            super.apiDidReturnData(data: profile)
+        }
         super.apiDidReturnData(data: data)
     }
 }

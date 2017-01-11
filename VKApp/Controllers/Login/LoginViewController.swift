@@ -27,6 +27,7 @@ class LoginViewController: BaseViewController {
             let token = AppManager.sharedInstance.accessToken
             
             if token.valid {
+                ApiManager.loadProfile()
                 showMainController()
             }
         }
@@ -37,9 +38,9 @@ class LoginViewController: BaseViewController {
         let authController:AuthViewController = segue.destination as! AuthViewController
         
         authController.success = {(token) in
-            print(token)
             token.save()
             AppManager.sharedInstance.accessToken = token
+            ApiManager.loadProfile()
             self.showMainController()
         }
         
