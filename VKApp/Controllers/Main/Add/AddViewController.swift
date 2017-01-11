@@ -9,6 +9,15 @@
 import UIKit
 
 class AddViewController: BaseViewController {
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        let tabBarItem = TabBarItem()
+        tabBarItem.title = "Добавить"
+        tabBarItem.imageName = "add_tab_icon"
+        tabBarObject = tabBarItem
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,20 +25,9 @@ class AddViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override class func storyboardName() -> String {
+        // override method for other storyboard names
+        return "Add"
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

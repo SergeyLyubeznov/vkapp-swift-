@@ -13,7 +13,7 @@ class MainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.black
+        setupUI()
         
         addControllers()
     }
@@ -24,6 +24,7 @@ class MainViewController: UITabBarController {
     
     private func setupUI() {
         
+        view.backgroundColor = UIColor.black
         tabBar.barTintColor = UIColor.black
         tabBar.backgroundColor = UIColor.black
         tabBar.tintColor = UIColor.white
@@ -33,19 +34,21 @@ class MainViewController: UITabBarController {
     private func addControllers() {
         
         let home = HomeViewController.controller() as! BaseViewController
-        setViewControllers([home], animated: true)
+        let add = AddViewController.controller() as! BaseViewController
+        setViewControllers([home,add], animated: true)
         
-        let tabHome = tabBar.items?[0]
+        let count:Int = (viewControllers?.count)!
         
-        if let item = home.tabBarObject {
-            tabHome?.title = item.title
-            tabHome?.image = UIImage(named:item.imageName!)
-            tabHome?.selectedImage = UIImage(named:item.selectedImageName!)
-        } else {
+        for index in 0...count-1 {
+            let vc = viewControllers?[index] as! BaseViewController
+            let tabHome = tabBar.items?[index]
             
+            if let item = vc.tabBarObject {
+                tabHome?.title = item.title
+                tabHome?.image = UIImage(named:item.imageName!)
+                tabHome?.selectedImage = UIImage(named:item.selectedImageName!)
+            }
         }
-        
-        
     }
 
 }
