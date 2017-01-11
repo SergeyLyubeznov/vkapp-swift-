@@ -10,10 +10,24 @@ import UIKit
 
 class SettingsViewController: BaseViewController {
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        let tabBarItem = TabBarItem()
+        tabBarItem.title = "Настройки"
+        tabBarItem.imageName = "settings_tab_icon"
+        tabBarObject = tabBarItem
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override class func storyboardName() -> String {
+        // override method for other storyboard names
+        return "Settings"
     }
 
 }

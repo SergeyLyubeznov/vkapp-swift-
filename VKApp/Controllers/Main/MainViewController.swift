@@ -35,7 +35,9 @@ class MainViewController: UITabBarController {
         
         let home = HomeViewController.controller() as! BaseViewController
         let add = AddViewController.controller() as! BaseViewController
-        setViewControllers([home,add], animated: true)
+        let settings = SettingsViewController.controller() as! BaseViewController
+        
+        viewControllers = [home,add,settings]
         
         let count:Int = (viewControllers?.count)!
         
@@ -50,5 +52,4 @@ class MainViewController: UITabBarController {
             }
         }
     }
-
 }
