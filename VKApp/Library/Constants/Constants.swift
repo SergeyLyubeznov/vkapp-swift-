@@ -15,6 +15,7 @@ struct Constants {
         static let AppId = "4933789"
         static let UserScope = "friends"
         static let vkVersion = "5.62"
-        static let BaseURL = ""
+        static let BaseURL = "https://httpbin.org/"
+        static let MePath = "get"
     }
 }
