@@ -9,6 +9,8 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    
+    var tabBarObject: TabBarItem?
 
     override func viewDidLoad() {
         super.viewDidLoad()
