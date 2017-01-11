@@ -7,15 +7,41 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
+
+let key = "access_token"
 
 class AccessToken: NSObject {
+    
     var token:String?
     var expires:String?
     var userId:String?
     
-    init(with dict:[String:String]) {
-        self.token = dict["access_token"]
-        self.expires = dict["expires_in"]
-        self.userId = dict["user_id"]
+    var valid:Bool = false
+    
+    var tokenData:[String:String]? {
+        didSet{
+            if tokenData != nil {
+                token = tokenData?["access_token"]
+                expires = tokenData?["expires_in"]
+                userId = tokenData?["user_id"]
+                
+                //TODO: add real check valid token
+                valid = true
+                
+            }
+        }
+    }
+    
+    func load() {
+        
+        if let data = Defaults.value(forKey: key) {
+            tokenData = data as? [String:String]
+        }
+        
+    }
+    
+    func save() {
+        Defaults.set(tokenData, forKey: key)
     }
 }

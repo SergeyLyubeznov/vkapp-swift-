@@ -9,10 +9,27 @@
 import UIKit
 
 class LoginViewController: BaseViewController {
+    
+    var firstLoading = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if firstLoading {
+            
+            firstLoading = false
+            
+            let token = AppManager.sharedInstance.accessToken
+            
+            if token.valid {
+                showMainController()
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -21,6 +38,8 @@ class LoginViewController: BaseViewController {
         
         authController.success = {(token) in
             print(token)
+            token.save()
+            AppManager.sharedInstance.accessToken = token
             self.showMainController()
         }
         

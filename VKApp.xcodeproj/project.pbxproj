@@ -25,6 +25,8 @@
 		2D77F86A1E262AC800BAA219 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D77F8691E262AC800BAA219 /* Settings.storyboard */; };
 		2D77F86C1E262E8F00BAA219 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D77F86B1E262E8F00BAA219 /* Profile.storyboard */; };
 		2D77F8701E2630C400BAA219 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D77F86F1E2630C400BAA219 /* Friends.storyboard */; };
+		2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8721E263AF900BAA219 /* AppManager.swift */; };
+		2D77F8751E263C6A00BAA219 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F8741E263C6A00BAA219 /* SwiftyUserDefaults.framework */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		2D77F8691E262AC800BAA219 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		2D77F86B1E262E8F00BAA219 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		2D77F86F1E2630C400BAA219 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
+		2D77F8721E263AF900BAA219 /* AppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		2D77F8741E263C6A00BAA219 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = "../../../Library/Developer/Xcode/DerivedData/VKApp-ghmndtuiotrbxuajwrwtquparqvj/Build/Products/Debug-iphonesimulator/SwiftyUserDefaults/SwiftyUserDefaults.framework"; sourceTree = "<group>"; };
 		2DE8E7731E250195002E64DB /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -81,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D77F8751E263C6A00BAA219 /* SwiftyUserDefaults.framework in Frameworks */,
 				2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */,
 				A7A3D5AF30369CC54FF1A8EC /* Pods_VKApp.framework in Frameworks */,
 			);
@@ -174,6 +179,14 @@
 			path = Friends;
 			sourceTree = "<group>";
 		};
+		2D77F8711E263AEA00BAA219 /* AppManager */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8721E263AF900BAA219 /* AppManager.swift */,
+			);
+			path = AppManager;
+			sourceTree = "<group>";
+		};
 		2DE8E76A1E250195002E64DB = {
 			isa = PBXGroup;
 			children = (
@@ -217,8 +230,8 @@
 		2DE8E78B1E2504EA002E64DB /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2D77F83C1E25977A00BAA219 /* Main */,
 				2DE8E79C1E251EA6002E64DB /* Login */,
+				2D77F83C1E25977A00BAA219 /* Main */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -287,6 +300,7 @@
 		2DE8E7AB1E253305002E64DB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8711E263AEA00BAA219 /* AppManager */,
 				2D77F8351E256E8D00BAA219 /* AuthManager */,
 				2DE8E7AC1E253305002E64DB /* API */,
 				2DE8E7AD1E253305002E64DB /* Base objects extensions */,
@@ -329,6 +343,7 @@
 		A797E73D610910FCE35107AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8741E263C6A00BAA219 /* SwiftyUserDefaults.framework */,
 				2DE8E7B31E2544B1002E64DB /* Alamofire.framework */,
 				2DE8E7A71E252FA3002E64DB /* VK_ios_sdk.framework */,
 				0483D497921F7302641FB148 /* Pods_VKApp.framework */,
@@ -490,6 +505,7 @@
 				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
 				2D77F8661E25BA2B00BAA219 /* TabBarItem.swift in Sources */,
 				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
+				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,
 				2D77F85D1E25A0E400BAA219 /* ProfileViewController.swift in Sources */,
 				2D77F8391E2570DF00BAA219 /* AccessToken.swift in Sources */,

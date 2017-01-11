@@ -37,8 +37,9 @@ class AuthManager: NSObject {
             }
         }
         
-        let accessToken = AccessToken(with:dict)
-
+        let accessToken = AccessToken()
+        accessToken.tokenData = dict
+        
         return accessToken
     }
 
