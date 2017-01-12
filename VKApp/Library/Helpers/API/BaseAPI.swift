@@ -13,6 +13,8 @@ class BaseAPI: NSObject {
     
     var completion:((_ data:AnyObject?, _ erorr:Error?) -> Void)?
     
+    var object:AnyObject?
+    
     var addAccessToken = true
 
     public func startRequest(completion:@escaping (_ data: AnyObject?,_ error:Error?) -> Void) {
@@ -26,6 +28,8 @@ class BaseAPI: NSObject {
             let token = AppManager.sharedInstance.accessToken
             parameters["access_token"] = token.token
         }
+        
+        parameters["v"] = Constants.API.vkVersion
         
         Alamofire.request(url, method: method, parameters: parameters, headers: nil).responseJSON { response in
             

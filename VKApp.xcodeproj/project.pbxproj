@@ -36,6 +36,8 @@
 		2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8901E26B3C600BAA219 /* ApiManager.swift */; };
 		2D77F8951E26EFDB00BAA219 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8941E26EFDB00BAA219 /* City.swift */; };
 		2D77F8971E26F02800BAA219 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8961E26F02800BAA219 /* Country.swift */; };
+		2D77F89A1E2788EF00BAA219 /* LastSeen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8991E2788EF00BAA219 /* LastSeen.swift */; };
+		2D77F89D1E27D1D400BAA219 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F89C1E27D1D400BAA219 /* UserAPI.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -81,6 +83,8 @@
 		2D77F8901E26B3C600BAA219 /* ApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		2D77F8941E26EFDB00BAA219 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		2D77F8961E26F02800BAA219 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		2D77F8991E2788EF00BAA219 /* LastSeen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastSeen.swift; sourceTree = "<group>"; };
+		2D77F89C1E27D1D400BAA219 /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
 		2DE8E7731E250195002E64DB /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 		2D77F87A1E267AAF00BAA219 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8981E2788E100BAA219 /* LastSeen */,
 				2D77F8801E267BAF00BAA219 /* User.swift */,
 			);
 			path = User;
@@ -242,6 +247,7 @@
 		2D77F8821E268A2F00BAA219 /* GET */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F89B1E27D1BF00BAA219 /* UserAPI */,
 				2D77F8851E26A30300BAA219 /* MyProfileAPI */,
 			);
 			path = GET;
@@ -285,6 +291,22 @@
 				2D77F8961E26F02800BAA219 /* Country.swift */,
 			);
 			path = Country;
+			sourceTree = "<group>";
+		};
+		2D77F8981E2788E100BAA219 /* LastSeen */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8991E2788EF00BAA219 /* LastSeen.swift */,
+			);
+			path = LastSeen;
+			sourceTree = "<group>";
+		};
+		2D77F89B1E27D1BF00BAA219 /* UserAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F89C1E27D1D400BAA219 /* UserAPI.swift */,
+			);
+			path = UserAPI;
 			sourceTree = "<group>";
 		};
 		2DE8E76A1E250195002E64DB = {
@@ -602,6 +624,7 @@
 			files = (
 				2D77F8621E25A1DA00BAA219 /* FriendsViewController.swift in Sources */,
 				2D77F8521E259F8700BAA219 /* AddViewController.swift in Sources */,
+				2D77F89A1E2788EF00BAA219 /* LastSeen.swift in Sources */,
 				2DE8E79E1E251F18002E64DB /* LoginViewController.swift in Sources */,
 				2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */,
 				2D77F8971E26F02800BAA219 /* Country.swift in Sources */,
@@ -612,6 +635,7 @@
 				2D77F8591E25A0BA00BAA219 /* DialoguesViewController.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
+				2D77F89D1E27D1D400BAA219 /* UserAPI.swift in Sources */,
 				2D77F8471E259A9C00BAA219 /* BaseViewController.swift in Sources */,
 				2D77F8531E259F8700BAA219 /* HomeViewController.swift in Sources */,
 				2D77F87B1E267AAF00BAA219 /* AccessToken.swift in Sources */,

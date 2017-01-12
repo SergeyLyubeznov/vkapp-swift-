@@ -28,7 +28,9 @@ class AccessToken: NSObject {
                 
                 //TODO: add real check valid token
                 valid = true
-                
+            } else {
+                Defaults[key] = nil
+                valid = false
             }
         }
     }
@@ -39,6 +41,10 @@ class AccessToken: NSObject {
             tokenData = data as? [String:String]
         }
         
+    }
+    
+    func clear() {
+        tokenData = nil
     }
     
     func save() {

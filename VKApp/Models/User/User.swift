@@ -24,11 +24,6 @@ class User: BaseModel {
     var lastName:String?
     var maidenName:String?
     var screenName:String?
-    var gender:Int = 0 {
-        didSet{
-            genderType = GenderType(rawValue: gender)
-        }
-    }
     var genderType:GenderType?
     var relation:Int = 0
     var bdate:String?
@@ -38,6 +33,25 @@ class User: BaseModel {
     var country:Country?
     var status:String?
     var phone:String?
+    var nickname:String?
+    var domain:String?
+    var photo:String?
+    var photoId:String?
+    var hasPhoto:Bool = false
+    var hasMobile:Bool = false
+    var isFriend:Bool = false
+    var isDeactivated:Bool = false
+    var friendStatus:Int = 0
+    var online:Bool = false
+    var mobilePhone:String?
+    var homePhone:String?
+    var site:String?
+    var lastSeen:LastSeen?
+    var gender:Int = 0 {
+        didSet{
+            genderType = GenderType(rawValue: gender)
+        }
+    }
     
     func relationName() -> String {
         var string = ""
@@ -57,6 +71,9 @@ class User: BaseModel {
     }
     
     override func mapping(map: Map) {
+        
+        super.mapping(map: map)
+        
         firstName <- map["first_name"]
         lastName <- map["last_name"]
         maidenName <- map["maiden_name"]
@@ -70,6 +87,21 @@ class User: BaseModel {
         country <- map["country"]
         status <- map["status"]
         phone <- map["phone"]
+        nickname <- map["nickname"]
+        domain <- map["phone"]
+        photo <- map["photo_200"]
+        photoId <- map["photo_id"]
+        hasPhoto <- map["has_photo"]
+        hasMobile <- map["has_mobile"]
+        isFriend <- map["is_friend"]
+        friendStatus <- map["friend_status"]
+        online <- map["online"]
+        mobilePhone <- map["mobile_phone"]
+        homePhone <- map["home_phone"]
+        site <- map["site"]
+        lastSeen <- map["last_seen"]
+        isDeactivated <- map["deactivated"]
+        
     }
 
 }

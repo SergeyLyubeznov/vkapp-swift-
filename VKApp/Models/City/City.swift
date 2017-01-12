@@ -15,6 +15,6 @@ class City: BaseModel {
     
     override func mapping(map: Map) {
         title <- map["title"]
-        id <- map["cid"]
+        id <- map["id"]
     }
 }

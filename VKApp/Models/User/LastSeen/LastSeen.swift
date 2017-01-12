@@ -1,5 +1,5 @@
 //
-//  Country.swift
+//  LastSeen.swift
 //  VKApp
 //
 //  Created by Sergey Lyubeznov on 12/01/2017.
@@ -9,12 +9,13 @@
 import UIKit
 import ObjectMapper
 
-class Country: BaseModel {
+class LastSeen: BaseModel {
 
-    var title:String?
+    var time:TimeInterval?
+    var platform:Int = 0
     
     override func mapping(map: Map) {
-        title <- map["title"]
-        id <- map["id"]
+        time <- map["time"]
+        platform <- map["platform"]
     }
 }

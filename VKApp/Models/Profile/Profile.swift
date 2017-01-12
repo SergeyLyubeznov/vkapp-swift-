@@ -8,6 +8,8 @@
 
 import UIKit
 
-class Profile: User {
+class Profile: BaseModel {
+    
+    var user:User?
     
 }

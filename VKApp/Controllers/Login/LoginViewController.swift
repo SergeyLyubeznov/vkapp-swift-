@@ -25,7 +25,7 @@ class LoginViewController: BaseViewController {
             firstLoading = false
             
             let token = AppManager.sharedInstance.accessToken
-            
+            //token.clear()
             if token.valid {
                 self.loadProfileAndMoveToMain()
             }
