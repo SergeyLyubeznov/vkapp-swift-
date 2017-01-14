@@ -4,19 +4,24 @@ PODS:
     - Alamofire (~> 4.0)
     - ObjectMapper (~> 2.0)
   - ObjectMapper (2.0.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
   - SwiftyUserDefaults (3.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - AlamofireObjectMapper (~> 4.0)
+  - SDWebImage (~> 3.8)
   - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
   ObjectMapper: aed2570edabbd3c9b26c939e1cabdb6558f933e0
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: d3b3f3b7e27db0abb3dae0b44f8953fbe80438e4
+PODFILE CHECKSUM: b6a8b1579d84de44af408d18fbfac284794f342f
 
 COCOAPODS: 1.1.1

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ProfileUserInfoCell: BaseTableViewCell {
 
@@ -39,7 +40,15 @@ class ProfileUserInfoCell: BaseTableViewCell {
         }
         
         if let imageName = user.photo {
-            //add load image
+            let downloader = SDWebImageDownloader.shared()
+            downloader?.downloadImage(with: URL(string:imageName), options:SDWebImageDownloaderOptions.useNSURLCache,
+                                      progress: nil, completed: { (image, data, error, result) in
+                                        
+                                        DispatchQueue.main.async {
+                                            self.backgroundImageView.image = image
+                                            self.avatarImageView.image = image
+                                        }
+            })
         }
         
     }

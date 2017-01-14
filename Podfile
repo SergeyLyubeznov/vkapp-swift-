@@ -10,5 +10,6 @@ target 'VKApp' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyUserDefaults'
   pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'SDWebImage', '~> 3.8'
 
 end

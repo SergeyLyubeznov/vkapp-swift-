@@ -58,10 +58,16 @@
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iEY-DA-3rS">
                                                     <rect key="frame" x="20" y="20" width="100" height="100"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="TZE-74-Ecz"/>
                                                         <constraint firstAttribute="height" constant="100" id="jJT-VC-M3G"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="50"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qH-8U-OQg">
                                                     <rect key="frame" x="165" y="24" width="202" height="26"/>
@@ -142,7 +148,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="backgroundView" destination="Qsj-w6-muo" id="BIK-83-s30"/>
+                                            <outlet property="avatarImageView" destination="iEY-DA-3rS" id="FTk-4J-S6y"/>
+                                            <outlet property="backgroundImageView" destination="Qsj-w6-muo" id="Nvm-dt-gJS"/>
                                             <outlet property="bdayLabel" destination="COl-JR-bMW" id="ZW0-EZ-8fA"/>
                                             <outlet property="cityLabel" destination="0Mt-DC-AjK" id="9rT-SO-Qvh"/>
                                             <outlet property="nameLabel" destination="0qH-8U-OQg" id="wir-Zi-QA8"/>
