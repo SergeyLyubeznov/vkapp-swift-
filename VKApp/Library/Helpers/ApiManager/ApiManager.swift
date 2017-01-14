@@ -10,7 +10,7 @@ import UIKit
 
 class ApiManager: NSObject {
     
-    class func loadProfile() {
+    class func loadProfile(completion:@escaping (_ profile: Profile?) -> Void) {
         
         let myProfileAPI = MyProfileAPI()
         myProfileAPI.startRequest { (data, error) in
@@ -18,15 +18,20 @@ class ApiManager: NSObject {
             if let profile = data as? Profile {
                 let userId = AppManager.sharedInstance.accessToken.userId
                 profile.id = UInt(userId!)!
-                AppManager.sharedInstance.profile = profile
                 
                 let userAPI = UserAPI()
                 userAPI.object = userId as AnyObject?
-                userAPI.startRequest(completion: { (data, error) in
-                    if let user = data as? User {
-                        profile.user = user
+                userAPI.startRequest{ (data, error) in
+                    
+                    guard let array = data as? Array<User> else {
+                        return
                     }
-                })
+                    
+                    if let user = array.first {
+                        profile.user = user
+                        completion(profile)
+                    }
+                }
             }
         }
     }

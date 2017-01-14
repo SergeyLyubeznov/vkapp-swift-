@@ -38,6 +38,10 @@
 		2D77F8971E26F02800BAA219 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8961E26F02800BAA219 /* Country.swift */; };
 		2D77F89A1E2788EF00BAA219 /* LastSeen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8991E2788EF00BAA219 /* LastSeen.swift */; };
 		2D77F89D1E27D1D400BAA219 /* UserAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F89C1E27D1D400BAA219 /* UserAPI.swift */; };
+		2D77F89F1E29A44800BAA219 /* ProfileViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F89E1E29A44800BAA219 /* ProfileViewController + TableView.swift */; };
+		2D77F8A21E29AE5700BAA219 /* ProfileUserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8A11E29AE5700BAA219 /* ProfileUserInfoCell.swift */; };
+		2D77F8A41E29AE8800BAA219 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8A31E29AE8800BAA219 /* BaseTableViewCell.swift */; };
+		2D77F8A61E29B02800BAA219 /* User + Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8A51E29B02800BAA219 /* User + Mapping.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -85,7 +89,11 @@
 		2D77F8961E26F02800BAA219 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		2D77F8991E2788EF00BAA219 /* LastSeen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LastSeen.swift; sourceTree = "<group>"; };
 		2D77F89C1E27D1D400BAA219 /* UserAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAPI.swift; sourceTree = "<group>"; };
-		2DE8E7731E250195002E64DB /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D77F89E1E29A44800BAA219 /* ProfileViewController + TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ProfileViewController + TableView.swift"; sourceTree = "<group>"; };
+		2D77F8A11E29AE5700BAA219 /* ProfileUserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileUserInfoCell.swift; sourceTree = "<group>"; };
+		2D77F8A31E29AE8800BAA219 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		2D77F8A51E29B02800BAA219 /* User + Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User + Mapping.swift"; sourceTree = "<group>"; };
+		2DE8E7731E250195002E64DB /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = VKApp.app; path = "/Users/moltuc/Projects/Swift/VKApp/build/Debug-iphoneos/VKApp.app"; sourceTree = "<absolute>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -188,7 +196,9 @@
 		2D77F8571E25A0A600BAA219 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8A01E29AE2C00BAA219 /* Cell */,
 				2D77F85C1E25A0E400BAA219 /* ProfileViewController.swift */,
+				2D77F89E1E29A44800BAA219 /* ProfileViewController + TableView.swift */,
 				2D77F86B1E262E8F00BAA219 /* Profile.storyboard */,
 			);
 			path = Profile;
@@ -232,6 +242,7 @@
 			children = (
 				2D77F8981E2788E100BAA219 /* LastSeen */,
 				2D77F8801E267BAF00BAA219 /* User.swift */,
+				2D77F8A51E29B02800BAA219 /* User + Mapping.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -309,22 +320,21 @@
 			path = UserAPI;
 			sourceTree = "<group>";
 		};
+		2D77F8A01E29AE2C00BAA219 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8A11E29AE5700BAA219 /* ProfileUserInfoCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		2DE8E76A1E250195002E64DB = {
 			isa = PBXGroup;
 			children = (
 				2DE8E7751E250195002E64DB /* VKApp */,
-				2DE8E7741E250195002E64DB /* Products */,
 				BA0C529E05DC2933093A182E /* Pods */,
 				A797E73D610910FCE35107AC /* Frameworks */,
 			);
-			sourceTree = "<group>";
-		};
-		2DE8E7741E250195002E64DB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2DE8E7731E250195002E64DB /* VKApp.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		2DE8E7751E250195002E64DB /* VKApp */ = {
@@ -412,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				2D77F8461E259A9C00BAA219 /* BaseViewController.swift */,
+				2D77F8A31E29AE8800BAA219 /* BaseTableViewCell.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -540,7 +551,7 @@
 				Base,
 			);
 			mainGroup = 2DE8E76A1E250195002E64DB;
-			productRefGroup = 2DE8E7741E250195002E64DB /* Products */;
+			productRefGroup = 2DE8E76A1E250195002E64DB;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -627,11 +638,13 @@
 				2D77F89A1E2788EF00BAA219 /* LastSeen.swift in Sources */,
 				2DE8E79E1E251F18002E64DB /* LoginViewController.swift in Sources */,
 				2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */,
+				2D77F8A61E29B02800BAA219 /* User + Mapping.swift in Sources */,
 				2D77F8971E26F02800BAA219 /* Country.swift in Sources */,
 				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
 				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
 				2D77F8951E26EFDB00BAA219 /* City.swift in Sources */,
 				2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */,
+				2D77F8A21E29AE5700BAA219 /* ProfileUserInfoCell.swift in Sources */,
 				2D77F8591E25A0BA00BAA219 /* DialoguesViewController.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
@@ -641,8 +654,10 @@
 				2D77F87B1E267AAF00BAA219 /* AccessToken.swift in Sources */,
 				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
 				2D77F87C1E267AAF00BAA219 /* TabBarItem.swift in Sources */,
+				2D77F8A41E29AE8800BAA219 /* BaseTableViewCell.swift in Sources */,
 				2D77F87F1E267B7000BAA219 /* BaseModel.swift in Sources */,
 				2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */,
+				2D77F89F1E29A44800BAA219 /* ProfileViewController + TableView.swift in Sources */,
 				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
 				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,

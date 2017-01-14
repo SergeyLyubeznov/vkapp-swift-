@@ -9,7 +9,15 @@
 import UIKit
 
 class ProfileViewController: BaseViewController {
-
+    
+    @IBOutlet internal weak var tableView:UITableView!
+    
+   internal var profile:Profile? {
+        didSet{
+            reloadTableView()
+        }
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
@@ -22,7 +30,14 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        loadProfile()
+    }
+    
+    private func loadProfile() {
+        ApiManager.loadProfile { (profile) in
+            self.profile = profile
+        }
+
     }
     
     override class func storyboardName() -> String {
