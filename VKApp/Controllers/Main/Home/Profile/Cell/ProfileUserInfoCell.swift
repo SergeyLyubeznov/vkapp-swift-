@@ -15,7 +15,7 @@ class ProfileUserInfoCell: BaseTableViewCell {
     @IBOutlet weak var cityLabel:UILabel!
     @IBOutlet weak var bdayLabel:UILabel!
     @IBOutlet weak var statusLabel:UILabel!
-    @IBOutlet weak var backgroundImageView:UIImageView!
+    @IBOutlet weak var backgroundImageView:BackgroundPhotoView!
     @IBOutlet weak var avatarImageView:UIImageView!
     
     override func updateUI() {

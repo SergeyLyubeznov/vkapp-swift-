@@ -30,7 +30,12 @@ class ProfileViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupTableView()
         loadProfile()
+    }
+    
+    private func setupTableView() {
+        tableView.hideEmtyCells()
     }
     
     private func loadProfile() {

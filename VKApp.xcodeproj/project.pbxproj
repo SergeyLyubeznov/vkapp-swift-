@@ -43,6 +43,9 @@
 		2D77F8A41E29AE8800BAA219 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8A31E29AE8800BAA219 /* BaseTableViewCell.swift */; };
 		2D77F8A61E29B02800BAA219 /* User + Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8A51E29B02800BAA219 /* User + Mapping.swift */; };
 		2D77F8AA1E29C01B00BAA219 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F8A91E29C01B00BAA219 /* SDWebImage.framework */; };
+		2D77F8AC1E2D779500BAA219 /* UITableView + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8AB1E2D779500BAA219 /* UITableView + Utils.swift */; };
+		2D77F8B11E2D797800BAA219 /* BackgroundPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8B01E2D797800BAA219 /* BackgroundPhotoView.swift */; };
+		2D77F8B31E2D79A300BAA219 /* UIImage + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8B21E2D79A300BAA219 /* UIImage + Utils.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -96,6 +99,9 @@
 		2D77F8A51E29B02800BAA219 /* User + Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User + Mapping.swift"; sourceTree = "<group>"; };
 		2D77F8A81E29BF6B00BAA219 /* VKApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VKApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D77F8A91E29C01B00BAA219 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = "Pods/../build/Debug-iphoneos/SDWebImage/SDWebImage.framework"; sourceTree = "<group>"; };
+		2D77F8AB1E2D779500BAA219 /* UITableView + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Utils.swift"; sourceTree = "<group>"; };
+		2D77F8B01E2D797800BAA219 /* BackgroundPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundPhotoView.swift; sourceTree = "<group>"; };
+		2D77F8B21E2D79A300BAA219 /* UIImage + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage + Utils.swift"; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -331,6 +337,14 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		2D77F8AF1E2D796800BAA219 /* BackgroundPhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8B01E2D797800BAA219 /* BackgroundPhotoView.swift */,
+			);
+			path = BackgroundPhotoView;
+			sourceTree = "<group>";
+		};
 		2DE8E76A1E250195002E64DB = {
 			isa = PBXGroup;
 			children = (
@@ -346,9 +360,9 @@
 			children = (
 				2DE8E78B1E2504EA002E64DB /* Controllers */,
 				2DE8E78E1E2504EA002E64DB /* Models */,
+				2DE8E7951E2504EA002E64DB /* Views */,
 				2DE8E78D1E2504EA002E64DB /* Library */,
 				2DE8E78F1E2504EA002E64DB /* Resources */,
-				2DE8E7951E2504EA002E64DB /* Views */,
 				2DE8E7881E2504EA002E64DB /* Application */,
 			);
 			path = VKApp;
@@ -408,6 +422,7 @@
 		2DE8E7951E2504EA002E64DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8AF1E2D796800BAA219 /* BackgroundPhotoView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -465,6 +480,8 @@
 			isa = PBXGroup;
 			children = (
 				2D77F83A1E25752300BAA219 /* UIViewController + Utils.swift */,
+				2D77F8AB1E2D779500BAA219 /* UITableView + Utils.swift */,
+				2D77F8B21E2D79A300BAA219 /* UIImage + Utils.swift */,
 			);
 			path = "Base objects extensions";
 			sourceTree = "<group>";
@@ -645,6 +662,7 @@
 				2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */,
 				2D77F8A61E29B02800BAA219 /* User + Mapping.swift in Sources */,
 				2D77F8971E26F02800BAA219 /* Country.swift in Sources */,
+				2D77F8B11E2D797800BAA219 /* BackgroundPhotoView.swift in Sources */,
 				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
 				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
 				2D77F8951E26EFDB00BAA219 /* City.swift in Sources */,
@@ -658,11 +676,13 @@
 				2D77F8531E259F8700BAA219 /* HomeViewController.swift in Sources */,
 				2D77F87B1E267AAF00BAA219 /* AccessToken.swift in Sources */,
 				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
+				2D77F8AC1E2D779500BAA219 /* UITableView + Utils.swift in Sources */,
 				2D77F87C1E267AAF00BAA219 /* TabBarItem.swift in Sources */,
 				2D77F8A41E29AE8800BAA219 /* BaseTableViewCell.swift in Sources */,
 				2D77F87F1E267B7000BAA219 /* BaseModel.swift in Sources */,
 				2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */,
 				2D77F89F1E29A44800BAA219 /* ProfileViewController + TableView.swift in Sources */,
+				2D77F8B31E2D79A300BAA219 /* UIImage + Utils.swift in Sources */,
 				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
 				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,
