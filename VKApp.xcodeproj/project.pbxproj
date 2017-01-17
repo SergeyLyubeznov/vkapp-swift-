@@ -52,6 +52,7 @@
 		2D77F8BE1E2DB08700BAA219 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8BD1E2DB08700BAA219 /* CounterView.swift */; };
 		2D77F8C21E2DE77F00BAA219 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C11E2DE77F00BAA219 /* Router.swift */; };
 		2D77F8C41E2DF00300BAA219 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C31E2DF00300BAA219 /* BaseNavigationController.swift */; };
+		2D77F8C71E2E68E100BAA219 /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C61E2E68E100BAA219 /* FriendsAPI.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 		2D77F8BD1E2DB08700BAA219 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		2D77F8C11E2DE77F00BAA219 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2D77F8C31E2DF00300BAA219 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		2D77F8C61E2E68E100BAA219 /* FriendsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		2D77F8821E268A2F00BAA219 /* GET */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8C51E2E68CC00BAA219 /* FriendsAPI */,
 				2D77F89B1E27D1BF00BAA219 /* UserAPI */,
 				2D77F8851E26A30300BAA219 /* MyProfileAPI */,
 			);
@@ -383,6 +386,14 @@
 				2D77F8BD1E2DB08700BAA219 /* CounterView.swift */,
 			);
 			path = CounterView;
+			sourceTree = "<group>";
+		};
+		2D77F8C51E2E68CC00BAA219 /* FriendsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8C61E2E68E100BAA219 /* FriendsAPI.swift */,
+			);
+			path = FriendsAPI;
 			sourceTree = "<group>";
 		};
 		2DE8E76A1E250195002E64DB = {
@@ -714,6 +725,7 @@
 				2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */,
 				2D77F8A21E29AE5700BAA219 /* ProfileUserInfoCell.swift in Sources */,
 				2D77F8591E25A0BA00BAA219 /* DialoguesViewController.swift in Sources */,
+				2D77F8C71E2E68E100BAA219 /* FriendsAPI.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
 				2D77F8B61E2D8FA600BAA219 /* Counters.swift in Sources */,

@@ -22,12 +22,21 @@ class FriendsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        loadFriends()
     }
     
     override class func storyboardName() -> String {
         // override method for other storyboard names
         return "Friends"
+    }
+    
+    private func loadFriends() {
+        
+        let api = FriendsAPI()
+        api.object = AppManager.sharedInstance.accessToken.userId as AnyObject?
+        api.startRequest { (data, error) in
+            print(data)
+        }
     }
 
 }

@@ -51,7 +51,7 @@ class MainViewController: UITabBarController {
         
         let count:Int = (viewControllers?.count)!
         
-        for index in 0...count-1 {
+        for index in 0...count - 1 {
             let navVC = viewControllers?[index] as! UINavigationController
             let vc = navVC.viewControllers.first as! BaseViewController
             let tabHome = tabBar.items?[index]
