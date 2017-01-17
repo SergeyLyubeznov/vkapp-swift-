@@ -10,14 +10,16 @@ import UIKit
 
 class CounterItem {
 
+    var name:String?
     var title:String?
     var count:UInt = 0
     
     init () {}
     
-    convenience init(title:String, count:UInt) {
+    convenience init(title:String,name:String, count:UInt) {
         self.init()
         
+        self.name = name
         self.title = title
         self.count = count
     }

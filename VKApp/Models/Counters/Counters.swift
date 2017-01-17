@@ -14,18 +14,18 @@ class Counters: BaseModel {
     var items:[CounterItem] = []
     
     var albums:UInt = 0
-    var videos:UInt = 0 {didSet{if videos > 0 {items.append(CounterItem(title:"Видео",count:self.videos))}}}
-    var audios:UInt = 0 {didSet{if audios > 0 {items.append(CounterItem(title:"Аудио",count:self.audios))}}}
+    var videos:UInt = 0 {didSet{if videos > 0 {items.append(CounterItem(title:"video",name:"Видео",count:self.videos))}}}
+    var audios:UInt = 0 {didSet{if audios > 0 {items.append(CounterItem(title:"audio",name:"Аудио",count:self.audios))}}}
     var notes:UInt = 0
-    var photos:UInt = 0 {didSet{if photos > 0 {items.append(CounterItem(title:"Фото",count:self.photos))}}}
-    var groups:UInt = 0 {didSet{if groups > 0 {items.append(CounterItem(title:"Группы",count:self.groups))}}}
-    var gifts:UInt = 0 {didSet{if gifts > 0 {items.append(CounterItem(title:"Подарки",count:self.gifts))}}}
-    var friends:UInt = 0 {didSet{if friends > 0 {items.append(CounterItem(title:"Друзья",count:self.friends))}}}
-    var onlineFriends:UInt = 0 {didSet{if onlineFriends > 0 {items.append(CounterItem(title:"Онлайн",count:self.onlineFriends))}}}
-    var mutualFriends:UInt = 0 {didSet{if mutualFriends > 0 {items.append(CounterItem(title:"Общие",count:self.mutualFriends))}}}
+    var photos:UInt = 0 {didSet{if photos > 0 {items.append(CounterItem(title:"photo",name:"Фото",count:self.photos))}}}
+    var groups:UInt = 0 {didSet{if groups > 0 {items.append(CounterItem(title:"groups",name:"Группы",count:self.groups))}}}
+    var gifts:UInt = 0 {didSet{if gifts > 0 {items.append(CounterItem(title:"gifts",name:"Подарки",count:self.gifts))}}}
+    var friends:UInt = 0 {didSet{if friends > 0 {items.append(CounterItem(title:"friends",name:"Друзья",count:self.friends))}}}
+    var onlineFriends:UInt = 0 {didSet{if onlineFriends > 0 {items.append(CounterItem(title:"online_friends",name:"Онлайн",count:self.onlineFriends))}}}
+    var mutualFriends:UInt = 0 {didSet{if mutualFriends > 0 {items.append(CounterItem(title:"mutual_friends",name:"Общие",count:self.mutualFriends))}}}
     var userPhotos:UInt = 0
     var userVideos:UInt = 0
-    var followers:UInt = 0 {didSet{if followers > 0 {items.append(CounterItem(title:"Подписчики",count:self.followers))}}}
+    var followers:UInt = 0 {didSet{if followers > 0 {items.append(CounterItem(title:"followers",name:"Подписчики",count:self.followers))}}}
     var subscriptions:UInt = 0
     var pages:UInt = 0
     

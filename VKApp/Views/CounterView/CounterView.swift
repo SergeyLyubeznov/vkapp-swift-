@@ -13,6 +13,8 @@ class CounterView: UIView {
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var countLabel:UILabel!
     
+    private var title:String?
+    
     var pressedCounter: ((_ string:String) -> (Void))?
     
     override func awakeFromNib() {
@@ -35,13 +37,14 @@ class CounterView: UIView {
     }
 
     func viewModel(model:CounterItem) {
-        titleLabel.text = model.title
+        titleLabel.text = model.name
         countLabel.text = String(format:"%d",model.count)
+        title = model.title
     }
     
     func buttonPressed() {
         if pressedCounter != nil {
-            pressedCounter!(titleLabel.text!)
+            pressedCounter!(title!)
         }
     }
     

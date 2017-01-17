@@ -50,6 +50,8 @@
 		2D77F8B91E2DA2AD00BAA219 /* CounterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8B81E2DA2AD00BAA219 /* CounterItem.swift */; };
 		2D77F8BB1E2DACA500BAA219 /* ProfleCounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8BA1E2DACA500BAA219 /* ProfleCounterCell.swift */; };
 		2D77F8BE1E2DB08700BAA219 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8BD1E2DB08700BAA219 /* CounterView.swift */; };
+		2D77F8C21E2DE77F00BAA219 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C11E2DE77F00BAA219 /* Router.swift */; };
+		2D77F8C41E2DF00300BAA219 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C31E2DF00300BAA219 /* BaseNavigationController.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -110,6 +112,8 @@
 		2D77F8B81E2DA2AD00BAA219 /* CounterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterItem.swift; sourceTree = "<group>"; };
 		2D77F8BA1E2DACA500BAA219 /* ProfleCounterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfleCounterCell.swift; sourceTree = "<group>"; };
 		2D77F8BD1E2DB08700BAA219 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		2D77F8C11E2DE77F00BAA219 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2D77F8C31E2DF00300BAA219 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -479,6 +483,7 @@
 			children = (
 				2D77F8461E259A9C00BAA219 /* BaseViewController.swift */,
 				2D77F8A31E29AE8800BAA219 /* BaseTableViewCell.swift */,
+				2D77F8C31E2DF00300BAA219 /* BaseNavigationController.swift */,
 			);
 			path = "Base classes";
 			sourceTree = "<group>";
@@ -526,6 +531,7 @@
 		2DE8E7AE1E253305002E64DB /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8C11E2DE77F00BAA219 /* Router.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -719,11 +725,13 @@
 				2D77F8AC1E2D779500BAA219 /* UITableView + Utils.swift in Sources */,
 				2D77F87C1E267AAF00BAA219 /* TabBarItem.swift in Sources */,
 				2D77F8A41E29AE8800BAA219 /* BaseTableViewCell.swift in Sources */,
+				2D77F8C41E2DF00300BAA219 /* BaseNavigationController.swift in Sources */,
 				2D77F87F1E267B7000BAA219 /* BaseModel.swift in Sources */,
 				2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */,
 				2D77F89F1E29A44800BAA219 /* ProfileViewController + TableView.swift in Sources */,
 				2D77F8B31E2D79A300BAA219 /* UIImage + Utils.swift in Sources */,
 				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
+				2D77F8C21E2DE77F00BAA219 /* Router.swift in Sources */,
 				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,
 				2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */,

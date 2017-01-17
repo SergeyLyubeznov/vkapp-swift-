@@ -40,12 +40,20 @@ class MainViewController: UITabBarController {
         profile.isMyProfile = true
         let friends = FriendsViewController.controller() as! BaseViewController
         
-        viewControllers = [home,profile,add,friends,settings]
+        let navProfile = BaseNavigationController(rootViewController: profile)
+        let homeProfile = BaseNavigationController(rootViewController: home)
+        let addProfile = BaseNavigationController(rootViewController: add)
+        let friendsProfile = BaseNavigationController(rootViewController: friends)
+        let settingsProfile = BaseNavigationController(rootViewController: settings)
+        
+        
+        viewControllers = [homeProfile,navProfile,addProfile,friendsProfile,settingsProfile]
         
         let count:Int = (viewControllers?.count)!
         
         for index in 0...count-1 {
-            let vc = viewControllers?[index] as! BaseViewController
+            let navVC = viewControllers?[index] as! UINavigationController
+            let vc = navVC.viewControllers.first as! BaseViewController
             let tabHome = tabBar.items?[index]
             
             if let item = vc.tabBarObject {

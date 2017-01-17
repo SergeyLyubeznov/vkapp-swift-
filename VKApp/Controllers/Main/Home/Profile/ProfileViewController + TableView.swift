@@ -71,6 +71,7 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
                 counterCell.object = counterItemsAt(indexPath: indexPath)
                 counterCell.pressedCounter = {(title) in
                     print(title)
+                    self.showController(for: title)
                 }
             default: break
                 //
@@ -79,7 +80,12 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
-    func counterItemsAt(indexPath:IndexPath) -> [CounterItem] {
+    private func showController(for title:String) {
+        let controller = Router.getController(forTitle: title)
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    private func counterItemsAt(indexPath:IndexPath) -> [CounterItem] {
         
         var resultItems:[CounterItem] = []
         
