@@ -12,7 +12,9 @@ class ProfileViewController: BaseViewController {
     
     @IBOutlet internal weak var tableView:UITableView!
     
-   internal var profile:Profile? {
+    var isMyProfile:Bool = false
+    
+    var user:User? {
         didSet{
             reloadTableView()
         }
@@ -31,18 +33,24 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
         
         setupTableView()
-        loadProfile()
+        
+        if isMyProfile {
+            loadProfile()
+        } else {
+            //loadUser()
+        }
     }
     
     private func setupTableView() {
         tableView.hideEmtyCells()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 130.0
     }
     
     private func loadProfile() {
         ApiManager.loadProfile { (profile) in
-            self.profile = profile
+            self.user = profile?.user
         }
-
     }
     
     override class func storyboardName() -> String {

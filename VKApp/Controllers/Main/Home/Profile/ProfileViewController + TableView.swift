@@ -7,28 +7,86 @@
 //
 
 import Foundation
-import  UIKit
+import UIKit
+
+internal let ProfileCellIdentifiers = ["ProfileUserInfoCell","ProfleCounterCell"]
+
+enum ProfileCellIdentifier:Int {
+    case userInfo = 0, counter = 1
+    var name:String {
+        return genderNames[self.rawValue]
+    }
+}
 
 extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
-    
     
     func reloadTableView() {
         self.tableView.reloadData()
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        var rows = 1
+        
+        if section == 1 {
+            
+            if let items = user?.counters?.items {
+                let count:Double = Double(items.count)
+                let countersCount  = round(count / 2.0)
+                
+                rows =  Int(countersCount)
+            }
+        }
+        
+        return rows;
+    }
+    
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        
+        var sections = 1
+        
+        if let items = user?.counters?.items {
+            
+            if items.count > 0 {
+                sections += 1
+            }
+        }
+        
+        return sections;
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "ProfileUserInfoCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? BaseTableViewCell
         
-        if let profile = self.profile {
-            cell?.object = profile
+        let cellIdentifier = ProfileCellIdentifiers[indexPath.section]
+        let cell:BaseTableViewCell? = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? BaseTableViewCell
+        
+        if let user = self.user {
+            
+            switch indexPath.section {
+            case 0:cell?.object = user
+            case 1:cell?.object = counterItemsAt(indexPath: indexPath)
+            default: break
+                //
+            }
         }
-        
         return cell!
     }
     
+    func counterItemsAt(indexPath:IndexPath) -> [CounterItem] {
+        
+        var resultItems:[CounterItem] = []
+        
+        var index = indexPath.row * 2
+        if let items = user?.counters?.items {
+            
+            for i in 0...1 {
+                index+=i
+                if index < items.count {
+                    let item = items[index]
+                    resultItems.append(item)
+                }
+            }
+        }
+        return resultItems
+    }
 }

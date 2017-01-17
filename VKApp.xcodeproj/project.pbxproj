@@ -46,6 +46,10 @@
 		2D77F8AC1E2D779500BAA219 /* UITableView + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8AB1E2D779500BAA219 /* UITableView + Utils.swift */; };
 		2D77F8B11E2D797800BAA219 /* BackgroundPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8B01E2D797800BAA219 /* BackgroundPhotoView.swift */; };
 		2D77F8B31E2D79A300BAA219 /* UIImage + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8B21E2D79A300BAA219 /* UIImage + Utils.swift */; };
+		2D77F8B61E2D8FA600BAA219 /* Counters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8B51E2D8FA600BAA219 /* Counters.swift */; };
+		2D77F8B91E2DA2AD00BAA219 /* CounterItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8B81E2DA2AD00BAA219 /* CounterItem.swift */; };
+		2D77F8BB1E2DACA500BAA219 /* ProfleCounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8BA1E2DACA500BAA219 /* ProfleCounterCell.swift */; };
+		2D77F8BE1E2DB08700BAA219 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8BD1E2DB08700BAA219 /* CounterView.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -102,6 +106,10 @@
 		2D77F8AB1E2D779500BAA219 /* UITableView + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView + Utils.swift"; sourceTree = "<group>"; };
 		2D77F8B01E2D797800BAA219 /* BackgroundPhotoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundPhotoView.swift; sourceTree = "<group>"; };
 		2D77F8B21E2D79A300BAA219 /* UIImage + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage + Utils.swift"; sourceTree = "<group>"; };
+		2D77F8B51E2D8FA600BAA219 /* Counters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Counters.swift; sourceTree = "<group>"; };
+		2D77F8B81E2DA2AD00BAA219 /* CounterItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterItem.swift; sourceTree = "<group>"; };
+		2D77F8BA1E2DACA500BAA219 /* ProfleCounterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfleCounterCell.swift; sourceTree = "<group>"; };
+		2D77F8BD1E2DB08700BAA219 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +257,7 @@
 		2D77F87A1E267AAF00BAA219 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8B41E2D8F6800BAA219 /* Counters */,
 				2D77F8981E2788E100BAA219 /* LastSeen */,
 				2D77F8801E267BAF00BAA219 /* User.swift */,
 				2D77F8A51E29B02800BAA219 /* User + Mapping.swift */,
@@ -333,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				2D77F8A11E29AE5700BAA219 /* ProfileUserInfoCell.swift */,
+				2D77F8BA1E2DACA500BAA219 /* ProfleCounterCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -343,6 +353,32 @@
 				2D77F8B01E2D797800BAA219 /* BackgroundPhotoView.swift */,
 			);
 			path = BackgroundPhotoView;
+			sourceTree = "<group>";
+		};
+		2D77F8B41E2D8F6800BAA219 /* Counters */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8B71E2DA2A400BAA219 /* CounterItem */,
+				2D77F8B51E2D8FA600BAA219 /* Counters.swift */,
+			);
+			name = Counters;
+			path = ../Counters;
+			sourceTree = "<group>";
+		};
+		2D77F8B71E2DA2A400BAA219 /* CounterItem */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8B81E2DA2AD00BAA219 /* CounterItem.swift */,
+			);
+			path = CounterItem;
+			sourceTree = "<group>";
+		};
+		2D77F8BC1E2DB07900BAA219 /* CounterView */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8BD1E2DB08700BAA219 /* CounterView.swift */,
+			);
+			path = CounterView;
 			sourceTree = "<group>";
 		};
 		2DE8E76A1E250195002E64DB = {
@@ -422,6 +458,7 @@
 		2DE8E7951E2504EA002E64DB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8BC1E2DB07900BAA219 /* CounterView */,
 				2D77F8AF1E2D796800BAA219 /* BackgroundPhotoView */,
 			);
 			path = Views;
@@ -657,11 +694,13 @@
 			files = (
 				2D77F8621E25A1DA00BAA219 /* FriendsViewController.swift in Sources */,
 				2D77F8521E259F8700BAA219 /* AddViewController.swift in Sources */,
+				2D77F8BB1E2DACA500BAA219 /* ProfleCounterCell.swift in Sources */,
 				2D77F89A1E2788EF00BAA219 /* LastSeen.swift in Sources */,
 				2DE8E79E1E251F18002E64DB /* LoginViewController.swift in Sources */,
 				2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */,
 				2D77F8A61E29B02800BAA219 /* User + Mapping.swift in Sources */,
 				2D77F8971E26F02800BAA219 /* Country.swift in Sources */,
+				2D77F8BE1E2DB08700BAA219 /* CounterView.swift in Sources */,
 				2D77F8B11E2D797800BAA219 /* BackgroundPhotoView.swift in Sources */,
 				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
 				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
@@ -671,6 +710,7 @@
 				2D77F8591E25A0BA00BAA219 /* DialoguesViewController.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
+				2D77F8B61E2D8FA600BAA219 /* Counters.swift in Sources */,
 				2D77F89D1E27D1D400BAA219 /* UserAPI.swift in Sources */,
 				2D77F8471E259A9C00BAA219 /* BaseViewController.swift in Sources */,
 				2D77F8531E259F8700BAA219 /* HomeViewController.swift in Sources */,
@@ -689,6 +729,7 @@
 				2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */,
 				2D77F85D1E25A0E400BAA219 /* ProfileViewController.swift in Sources */,
 				2D77F8541E259F8700BAA219 /* SettingsViewController.swift in Sources */,
+				2D77F8B91E2DA2AD00BAA219 /* CounterItem.swift in Sources */,
 				2D77F8811E267BAF00BAA219 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

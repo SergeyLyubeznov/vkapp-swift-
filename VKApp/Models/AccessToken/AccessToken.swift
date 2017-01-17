@@ -11,7 +11,7 @@ import SwiftyUserDefaults
 
 let key = "access_token"
 
-class AccessToken: NSObject {
+class AccessToken {
     
     var token:String?
     var expires:String?

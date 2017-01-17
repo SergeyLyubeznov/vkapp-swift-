@@ -20,13 +20,11 @@ class ProfileUserInfoCell: BaseTableViewCell {
     
     override func updateUI() {
         
-        guard let profile = object as? Profile else {
+        guard let user = object as? User else {
             return
         }
         
-        guard let user = profile.user else {
-            return
-        }
+        print(user.counters)
         
         nameLabel.text = user.fullName()
         cityLabel.text = String(format:"г. %@",(user.city?.title)!)
@@ -50,6 +48,5 @@ class ProfileUserInfoCell: BaseTableViewCell {
                                         }
             })
         }
-        
     }
 }

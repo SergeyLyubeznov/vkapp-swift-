@@ -41,5 +41,6 @@ extension User {
         site <- map["site"]
         lastSeen <- map["last_seen"]
         isDeactivated <- map["deactivated"]
+        counters <- map["counters"]
     }
 }

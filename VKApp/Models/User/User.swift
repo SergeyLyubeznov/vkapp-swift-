@@ -47,6 +47,7 @@ class User: BaseModel {
     var homePhone:String?
     var site:String?
     var lastSeen:LastSeen?
+    var counters:Counters?
     var gender:Int = 0 {
         didSet{
             genderType = GenderType(rawValue: gender)
