@@ -64,7 +64,14 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
             
             switch indexPath.section {
             case 0:cell?.object = user
-            case 1:cell?.object = counterItemsAt(indexPath: indexPath)
+            case 1:
+                guard let counterCell = cell as? ProfleCounterCell else {
+                    break
+                }
+                counterCell.object = counterItemsAt(indexPath: indexPath)
+                counterCell.pressedCounter = {(title) in
+                    print(title)
+                }
             default: break
                 //
             }

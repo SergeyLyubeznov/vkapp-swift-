@@ -156,7 +156,7 @@
                                             <outlet property="statusLabel" destination="uJX-kR-S2s" id="2Hw-HC-ViZ"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfleCounterCell" rowHeight="44" id="U9g-xY-8Lm" customClass="ProfleCounterCell" customModule="VKApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfleCounterCell" rowHeight="44" id="U9g-xY-8Lm" customClass="ProfleCounterCell" customModule="VKApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="238" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U9g-xY-8Lm" id="qc8-gb-bhC">
