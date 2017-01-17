@@ -1,21 +1,18 @@
 //
-//  ProfileUserInfoCell.swift
+//  FriendsCell.swift
 //  VKApp
 //
-//  Created by Sergey Lyubeznov on 14/01/2017.
+//  Created by Sergey Lyubeznov on 17/01/2017.
 //  Copyright © 2017 Sergey Lyubeznov. All rights reserved.
 //
 
 import UIKit
 import SDWebImage
 
-class ProfileUserInfoCell: BaseTableViewCell {
-
+class FriendsCell: BaseTableViewCell {
+    
     @IBOutlet weak var nameLabel:UILabel!
-    @IBOutlet weak var cityLabel:UILabel!
-    @IBOutlet weak var bdayLabel:UILabel!
-    @IBOutlet weak var statusLabel:UILabel!
-    @IBOutlet weak var backgroundImageView:BackgroundPhotoView!
+    @IBOutlet weak var onineView:UIView!
     @IBOutlet weak var avatarImageView:UIImageView!
     
     override func updateUI() {
@@ -25,26 +22,18 @@ class ProfileUserInfoCell: BaseTableViewCell {
         }
         
         nameLabel.text = user.fullName()
-        cityLabel.text = String(format:"г. %@",(user.city?.title)!)
+        onineView.isHidden = !user.online
         
-        if let bdate = user.bdate {
-            bdayLabel.text = bdate
-        }
-        
-        if let status = user.status {
-            statusLabel.text = status
-        }
-        
-        if let imageName = user.photo200 {
+        if let imageName = user.photo100 {
             let downloader = SDWebImageDownloader.shared()
             downloader?.downloadImage(with: URL(string:imageName), options:SDWebImageDownloaderOptions.useNSURLCache,
                                       progress: nil, completed: { (image, data, error, result) in
                                         
                                         DispatchQueue.main.async {
-                                            self.backgroundImageView.image = image
                                             self.avatarImageView.image = image
                                         }
             })
         }
     }
+
 }

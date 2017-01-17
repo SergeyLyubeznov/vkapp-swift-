@@ -35,7 +35,8 @@ class User: BaseModel {
     var phone:String?
     var nickname:String?
     var domain:String?
-    var photo:String?
+    var photo200:String?
+    var photo100:String?
     var photoId:String?
     var hasPhoto:Bool = false
     var hasMobile:Bool = false

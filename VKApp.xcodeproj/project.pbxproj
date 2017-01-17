@@ -53,6 +53,8 @@
 		2D77F8C21E2DE77F00BAA219 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C11E2DE77F00BAA219 /* Router.swift */; };
 		2D77F8C41E2DF00300BAA219 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C31E2DF00300BAA219 /* BaseNavigationController.swift */; };
 		2D77F8C71E2E68E100BAA219 /* FriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C61E2E68E100BAA219 /* FriendsAPI.swift */; };
+		2D77F8C91E2E70FF00BAA219 /* FriendsViewController + TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8C81E2E70FF00BAA219 /* FriendsViewController + TableView.swift */; };
+		2D77F8CC1E2E717900BAA219 /* FriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8CB1E2E717900BAA219 /* FriendsCell.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -116,6 +118,8 @@
 		2D77F8C11E2DE77F00BAA219 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2D77F8C31E2DF00300BAA219 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		2D77F8C61E2E68E100BAA219 /* FriendsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsAPI.swift; sourceTree = "<group>"; };
+		2D77F8C81E2E70FF00BAA219 /* FriendsViewController + TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FriendsViewController + TableView.swift"; sourceTree = "<group>"; };
+		2D77F8CB1E2E717900BAA219 /* FriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCell.swift; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -230,7 +234,9 @@
 		2D77F8601E25A1CF00BAA219 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				2D77F8CA1E2E715D00BAA219 /* Cell */,
 				2D77F8611E25A1DA00BAA219 /* FriendsViewController.swift */,
+				2D77F8C81E2E70FF00BAA219 /* FriendsViewController + TableView.swift */,
 				2D77F86F1E2630C400BAA219 /* Friends.storyboard */,
 			);
 			path = Friends;
@@ -394,6 +400,14 @@
 				2D77F8C61E2E68E100BAA219 /* FriendsAPI.swift */,
 			);
 			path = FriendsAPI;
+			sourceTree = "<group>";
+		};
+		2D77F8CA1E2E715D00BAA219 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2D77F8CB1E2E717900BAA219 /* FriendsCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		2DE8E76A1E250195002E64DB = {
@@ -728,10 +742,12 @@
 				2D77F8C71E2E68E100BAA219 /* FriendsAPI.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
+				2D77F8CC1E2E717900BAA219 /* FriendsCell.swift in Sources */,
 				2D77F8B61E2D8FA600BAA219 /* Counters.swift in Sources */,
 				2D77F89D1E27D1D400BAA219 /* UserAPI.swift in Sources */,
 				2D77F8471E259A9C00BAA219 /* BaseViewController.swift in Sources */,
 				2D77F8531E259F8700BAA219 /* HomeViewController.swift in Sources */,
+				2D77F8C91E2E70FF00BAA219 /* FriendsViewController + TableView.swift in Sources */,
 				2D77F87B1E267AAF00BAA219 /* AccessToken.swift in Sources */,
 				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
 				2D77F8AC1E2D779500BAA219 /* UITableView + Utils.swift in Sources */,

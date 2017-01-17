@@ -20,10 +20,6 @@ enum ProfileCellIdentifier:Int {
 
 extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
     
-    func reloadTableView() {
-        self.tableView.reloadData()
-    }
-    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         var rows = 1

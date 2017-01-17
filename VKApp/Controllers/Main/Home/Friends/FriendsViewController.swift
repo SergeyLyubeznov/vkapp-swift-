@@ -9,6 +9,14 @@
 import UIKit
 
 class FriendsViewController: BaseViewController {
+    
+    @IBOutlet internal weak var tableView:UITableView!
+    
+    var friends:[User] = [] {
+        didSet{
+            tableView.reload()
+        }
+    }
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -19,15 +27,20 @@ class FriendsViewController: BaseViewController {
         tabBarObject = tabBarItem
     }
     
+    override class func storyboardName() -> String {
+        // override method for other storyboard names
+        return "Friends"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         loadFriends()
     }
     
-    override class func storyboardName() -> String {
-        // override method for other storyboard names
-        return "Friends"
+    private func setupTableView() {
+        tableView.hideEmtyCells()
+         tableView.enableAutolayout()
     }
     
     private func loadFriends() {
@@ -35,7 +48,9 @@ class FriendsViewController: BaseViewController {
         let api = FriendsAPI()
         api.object = AppManager.sharedInstance.accessToken.userId as AnyObject?
         api.startRequest { (data, error) in
-            print(data)
+            if let friends = data as? [User] {
+                self.friends = friends
+            }
         }
     }
 

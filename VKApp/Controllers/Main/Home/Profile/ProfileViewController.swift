@@ -16,7 +16,7 @@ class ProfileViewController: BaseViewController {
     
     var user:User? {
         didSet{
-            reloadTableView()
+            tableView.reload()
         }
     }
     
@@ -43,8 +43,7 @@ class ProfileViewController: BaseViewController {
     
     private func setupTableView() {
         tableView.hideEmtyCells()
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 130.0
+        tableView.enableAutolayout()
     }
     
     private func loadProfile() {

@@ -14,4 +14,13 @@ extension UITableView {
     func hideEmtyCells() {
         tableFooterView = UIView()
     }
+    
+    func enableAutolayout() {
+        rowHeight = UITableViewAutomaticDimension
+        estimatedRowHeight = 130.0
+    }
+    
+    func reload() {
+        reloadData()
+    }
 }
