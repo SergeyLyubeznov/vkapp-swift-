@@ -16,17 +16,16 @@ class Router: NSObject {
 
     class func getController(forTitle:String) -> BaseViewController {
         
-        var controller:BaseViewController?
+        var controller:BaseViewController = BaseViewController()
         
         switch forTitle {
         case ControllersType.friends.rawValue:
-            controller = FriendsViewController.controller() as? BaseViewController
+            controller = FriendsViewController.controller() as! BaseViewController
             
         default: break
             //
         }
-        
-        return controller!
+        return controller
     }
     
 }

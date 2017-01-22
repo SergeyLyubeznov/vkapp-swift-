@@ -31,7 +31,6 @@
 		2D77F8811E267BAF00BAA219 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8801E267BAF00BAA219 /* User.swift */; };
 		2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8861E26A31100BAA219 /* MyProfileAPI.swift */; };
 		2D77F88A1E26AA2700BAA219 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8891E26AA2700BAA219 /* Profile.swift */; };
-		2D77F88C1E26AD8700BAA219 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F88B1E26AD8700BAA219 /* AlamofireObjectMapper.framework */; };
 		2D77F88E1E26ADB300BAA219 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D77F88D1E26ADB300BAA219 /* ObjectMapper.framework */; };
 		2D77F8911E26B3C600BAA219 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8901E26B3C600BAA219 /* ApiManager.swift */; };
 		2D77F8951E26EFDB00BAA219 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D77F8941E26EFDB00BAA219 /* City.swift */; };
@@ -68,7 +67,6 @@
 		2DE8E7A21E251F90002E64DB /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7A11E251F90002E64DB /* Login.storyboard */; };
 		2DE8E7B01E253315002E64DB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7AF1E253315002E64DB /* Constants.swift */; };
 		2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7B11E25448F002E64DB /* BaseAPI.swift */; };
-		2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE8E7B31E2544B1002E64DB /* Alamofire.framework */; };
 		2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7B61E255363002E64DB /* AuthViewController.swift */; };
 		A7A3D5AF30369CC54FF1A8EC /* Pods_VKApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0483D497921F7302641FB148 /* Pods_VKApp.framework */; };
 /* End PBXBuildFile section */
@@ -151,9 +149,7 @@
 			files = (
 				2D77F8AA1E29C01B00BAA219 /* SDWebImage.framework in Frameworks */,
 				2D77F88E1E26ADB300BAA219 /* ObjectMapper.framework in Frameworks */,
-				2D77F88C1E26AD8700BAA219 /* AlamofireObjectMapper.framework in Frameworks */,
 				2D77F8751E263C6A00BAA219 /* SwiftyUserDefaults.framework in Frameworks */,
-				2DE8E7B41E2544B1002E64DB /* Alamofire.framework in Frameworks */,
 				A7A3D5AF30369CC54FF1A8EC /* Pods_VKApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

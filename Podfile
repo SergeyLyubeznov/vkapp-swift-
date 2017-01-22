@@ -6,10 +6,8 @@ target 'VKApp' do
   use_frameworks!
 
   # Pods for VKApp
-  
-  pod 'Alamofire', '~> 4.0'
   pod 'SwiftyUserDefaults'
-  pod 'AlamofireObjectMapper', '~> 4.0'
+  pod 'ObjectMapper'
   pod 'SDWebImage', '~> 3.8'
 
 end

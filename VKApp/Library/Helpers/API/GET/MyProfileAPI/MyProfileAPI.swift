@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 import ObjectMapper
 
 class MyProfileAPI: BaseAPI {

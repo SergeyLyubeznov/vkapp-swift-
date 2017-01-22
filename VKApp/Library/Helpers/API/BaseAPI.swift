@@ -7,7 +7,13 @@
 //
 
 import UIKit
-import Alamofire
+
+enum HTTPMethod:String {
+    case get = "GET"
+    case post = "POST"
+    case put = "PUT"
+    case delete = "DELETE"
+}
 
 class BaseAPI: NSObject {
     
@@ -21,7 +27,7 @@ class BaseAPI: NSObject {
         
         let method = self.method()
         var parameters = self.parameters()
-        let url = Constants.API.BaseURL + self.path()
+        let baseUrl:String = Constants.API.BaseURL + self.path()
         self.completion = completion
         
         if addAccessToken {
@@ -29,30 +35,59 @@ class BaseAPI: NSObject {
             parameters["access_token"] = token.token
         }
         
-        parameters["v"] = Constants.API.vkVersion
+        let stringParam:String = parameters.stringFromHttpParameters()
         
-        Alamofire.request(url, method: method, parameters: parameters, headers: nil).responseJSON { response in
+        let resultUrl = baseUrl+"?\(stringParam)"
+        
+        guard let url = URL(string:resultUrl) else {return}
+        
+        var request = URLRequest.init(url: url)
+        request.httpMethod = method.rawValue
+        
+        let session = URLSession(configuration: .default)
+        var jsonObject:[String:Any]?
+        
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
             
-            if response.result.isSuccess {
-                
-                let dict = self.convertToDictionary(data: response.data!)
-                
-                self.apiDidReturnData(data: dict as AnyObject)
-            } else {
-                self.apiDidReturnError(error: response.result.value as! Error)
+            if let error = error {
+                self.apiDidReturnError(error: error)
+            } else if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 200 {
+                    let string:String = String.init(data: data!, encoding:String.Encoding.utf8)!
+                    print(string)
+                    
+                    do {
+                        jsonObject = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [String:Any]
+                    } catch {
+                        return
+                    }
+                    if jsonObject != nil {
+                        self.apiDidReturnData(data: jsonObject as AnyObject)
+                    }
+                }
             }
         }
+        
+        dataTask.resume()
     }
     
     func apiDidReturnData(data:AnyObject) {
-        if completion != nil {
-            completion?(data,nil)
+        
+        DispatchQueue.main.async {
+            if self.completion != nil {
+                self.completion?(data,nil)
+            }
         }
+
+        
+        
     }
     
     func apiDidReturnError(error:Error) {
-        if completion != nil {
-            completion?(nil,error)
+        DispatchQueue.main.async {
+            if self.completion != nil {
+                self.completion?(nil,error)
+            }
         }
     }
     
@@ -61,7 +96,9 @@ class BaseAPI: NSObject {
     }
     
     func parameters() -> [String:Any] {
-        return [String:Any]()
+        var parameters = [String:Any]()
+        parameters["v"] = Constants.API.vkVersion
+        return parameters
     }
     
     func path() -> String {
