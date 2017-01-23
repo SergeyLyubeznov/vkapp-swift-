@@ -12,6 +12,8 @@ class FriendsViewController: BaseViewController {
     
     @IBOutlet internal weak var tableView:UITableView!
     
+    var userID:String = "0"
+    
     var friends:[User] = [] {
         didSet{
             tableView.reload()
@@ -44,12 +46,9 @@ class FriendsViewController: BaseViewController {
     
     private func loadFriends() {
         
-        let api = FriendsAPI()
-        api.object = AppManager.sharedInstance.accessToken.userId as AnyObject?
-        api.startRequest { (data, error) in
-            if let friends = data as? [User] {
-                self.friends = friends
-            }
+        ApiManager.loadFriendsAt(userId: self.userID) { (friends) in
+            guard let friends = friends else{return}
+            self.friends = friends
         }
     }
 

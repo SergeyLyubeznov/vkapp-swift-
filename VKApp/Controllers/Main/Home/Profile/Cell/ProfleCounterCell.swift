@@ -20,7 +20,8 @@ class ProfleCounterCell: BaseTableViewCell {
         
         addClosureAt(counterView: counterViewFirst)
         addClosureAt(counterView: counterViewSecond)
-        }
+        
+    }
     
     private func addClosureAt(counterView:CounterView) {
         counterView.pressedCounter = {(title) in

@@ -9,7 +9,13 @@
 import Foundation
 import UIKit
 
+
+
 struct Constants {
+    
+    struct Permissions {
+        static let PrintDeinit = true
+    }
     
     struct Colors {
         static let BarTintColor = "#000000"

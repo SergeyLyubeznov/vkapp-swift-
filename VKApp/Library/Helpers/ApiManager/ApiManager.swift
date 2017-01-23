@@ -19,19 +19,40 @@ class ApiManager: NSObject {
                 let userId = AppManager.sharedInstance.accessToken.userId
                 profile.id = UInt(userId!)!
                 
-                let userAPI = UserAPI()
-                userAPI.object = userId as AnyObject?
-                userAPI.startRequest{ (data, error) in
-                    
-                    guard let array = data as? Array<User> else {
-                        return
-                    }
-                    
-                    if let user = array.first {
+                
+                self.loadUserAt(userId: userId!, completion: { (user) in
+                    if let user = user {
                         profile.user = user
                         completion(profile)
                     }
-                }
+                })
+            }
+        }
+    }
+    
+    class func loadUserAt(userId:String,completion:@escaping (_ user: User?) -> Void) {
+        
+        let userAPI = UserAPI()
+        userAPI.object = userId as AnyObject?
+        userAPI.startRequest{ (data, error) in
+            
+            guard let array = data as? Array<User> else {
+                return
+            }
+            
+            if let user = array.first {
+                completion(user)
+            }
+        }
+    }
+    
+    class func loadFriendsAt(userId:String,completion:@escaping (_ friends: [User]?) -> Void) {
+        
+        let api = FriendsAPI()
+        api.object = userId as AnyObject?
+        api.startRequest { (data, error) in
+            if let friends = data as? [User] {
+                completion(friends)
             }
         }
     }

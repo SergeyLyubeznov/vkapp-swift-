@@ -18,8 +18,10 @@ class ProfileViewController: BaseViewController {
     
     var user:User? {
         didSet{
-            updateUI()
-            tableView.reload()
+            if let tableView = tableView {
+                updateUI()
+                tableView.reload()
+            }
         }
     }
     
@@ -37,10 +39,9 @@ class ProfileViewController: BaseViewController {
         setupTableView()
         
         if isMyProfile {
-            
             loadProfile()
         } else {
-            //loadUser()
+            loadUser()
         }
     }
     
@@ -86,6 +87,17 @@ class ProfileViewController: BaseViewController {
         ApiManager.loadProfile { (profile) in
             self.user = profile?.user
         }
+    }
+    
+    private func loadUser() {
+        
+        let userId:String = (user?.id.description)!
+        
+        ApiManager.loadUserAt(userId:userId, completion: { (user) in
+            if let user = user {
+                self.user = user
+            }
+        })
     }
     
     override class func storyboardName() -> String {

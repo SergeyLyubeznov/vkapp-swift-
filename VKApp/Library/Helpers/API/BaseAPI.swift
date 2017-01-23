@@ -53,9 +53,7 @@ class BaseAPI: NSObject {
                 self.apiDidReturnError(error: error)
             } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    let string:String = String.init(data: data!, encoding:String.Encoding.utf8)!
-                    print(string)
-                    
+                
                     do {
                         jsonObject = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [String:Any]
                     } catch {

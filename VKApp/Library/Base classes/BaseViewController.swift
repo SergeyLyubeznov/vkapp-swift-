@@ -18,6 +18,13 @@ class BaseViewController: UIViewController {
         setupUI()
     }
     
+    deinit {
+        
+        if Constants.Permissions.PrintDeinit {
+            print("deinit - "+String(describing: self))
+        }
+    }
+    
     func setupUI() {
         
         view.backgroundColor = UIColor.black

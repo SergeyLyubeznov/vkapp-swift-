@@ -65,9 +65,11 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
                     break
                 }
                 counterCell.object = counterItemsAt(indexPath: indexPath)
+                weak var this = self
                 counterCell.pressedCounter = {(title) in
-                    print(title)
-                    self.showController(for: title)
+                    
+                    let vcType = ControllerType(rawValue: title)
+                    this?.showController(controllerType: vcType!)
                 }
             default: break
                 //
@@ -76,8 +78,15 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     
-    private func showController(for title:String) {
-        let controller = Router.getController(forTitle: title)
+    private func showController(controllerType:ControllerType) {
+        
+        var controller = Router.getController(controllerType: .friends)
+        
+        if controllerType == .friends {
+           let friendsController = controller as! FriendsViewController
+            friendsController.userID = (user?.id.description)!
+            controller = friendsController
+        }
         navigationController?.pushViewController(controller, animated: true)
     }
     

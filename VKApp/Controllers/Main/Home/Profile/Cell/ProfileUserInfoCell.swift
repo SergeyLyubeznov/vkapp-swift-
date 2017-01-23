@@ -24,8 +24,11 @@ class ProfileUserInfoCell: BaseTableViewCell {
             return
         }
         
+        if let city = user.city {
+            cityLabel.text = String(format:"г. %@",(city.title)!)
+        }
+        
         nameLabel.text = user.fullName()
-        cityLabel.text = String(format:"г. %@",(user.city?.title)!)
         
         if let bdate = user.bdate {
             bdayLabel.text = bdate

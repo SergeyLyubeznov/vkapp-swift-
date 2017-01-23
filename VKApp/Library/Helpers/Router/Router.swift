@@ -8,23 +8,23 @@
 
 import UIKit
 
-enum ControllersType:String {
-    case friends = "friends", news = "news", groups = "groups"
+enum ControllerType:String {
+    case friends = "Friends", news = "News", groups = "Groups",
+    profile = "Profile"
 }
 
 class Router: NSObject {
 
-    class func getController(forTitle:String) -> BaseViewController {
+    class func getController(controllerType:ControllerType) -> BaseViewController {
         
-        var controller:BaseViewController = BaseViewController()
-        
-        switch forTitle {
-        case ControllersType.friends.rawValue:
-            controller = FriendsViewController.controller() as! BaseViewController
-            
-        default: break
-            //
+        let appName = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
+        let controllerName = appName+"."+controllerType.rawValue+"ViewController"
+        let aClass = NSClassFromString(controllerName) as? BaseViewController.Type
+
+        guard let controller = aClass?.controller() as? BaseViewController else {
+            return BaseViewController()
         }
+        
         return controller
     }
     
