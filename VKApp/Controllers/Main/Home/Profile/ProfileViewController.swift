@@ -22,31 +22,38 @@ class ProfileViewController: BaseViewController {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        
-        let tabBarItem = TabBarItem()
-        tabBarItem.title = "Я"
-        tabBarItem.imageName = "user_tab_icon"
-        tabBarObject = tabBarItem
+
+        tabBarObject = TabBarItem(title: Constants.Controllers.TabTitle.Profile,
+                                  imageName:Constants.Controllers.TabImage.Profile)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupController()
         setupTableView()
         
         if isMyProfile {
+            
             loadProfile()
         } else {
             //loadUser()
         }
     }
     
+    private func setupController() {
+        
+        //navigationController?.navigationBar.isHidden = isMyProfile
+    }
+    
     private func setupTableView() {
+        
         tableView.hideEmtyCells()
         tableView.enableAutolayout()
     }
     
     private func loadProfile() {
+        
         ApiManager.loadProfile { (profile) in
             self.user = profile?.user
         }

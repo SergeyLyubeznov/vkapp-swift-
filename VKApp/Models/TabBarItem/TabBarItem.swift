@@ -10,12 +10,14 @@ import UIKit
 
 class TabBarItem: NSObject {
     var title:String?
-    var imageName:String? {
-        didSet {
-            if imageName != nil {
-                selectedImageName = imageName! + "_fill"
-            }
-        }
-    }
+    var imageName:String?
     var selectedImageName:String?
+    
+    init(title:String, imageName:String) {
+        super.init()
+        
+        self.title = title
+        self.imageName = imageName
+        self.selectedImageName = imageName+Constants.Controllers.TabSelectedImage.value
+    }
 }

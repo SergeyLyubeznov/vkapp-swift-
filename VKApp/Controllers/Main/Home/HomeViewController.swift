@@ -13,10 +13,8 @@ class HomeViewController: BaseViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let tabBarItem = TabBarItem()
-        tabBarItem.title = "Домой"
-        tabBarItem.imageName = "home_tab_icon"
-        tabBarObject = tabBarItem
+        tabBarObject = TabBarItem(title: Constants.Controllers.TabTitle.Home,
+                                  imageName:Constants.Controllers.TabImage.Home)
     }
     
     override func viewDidLoad() {

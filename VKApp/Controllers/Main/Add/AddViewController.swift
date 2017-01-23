@@ -13,10 +13,9 @@ class AddViewController: BaseViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let tabBarItem = TabBarItem()
-        tabBarItem.title = "Добавить"
-        tabBarItem.imageName = "add_tab_icon"
-        tabBarObject = tabBarItem
+        tabBarObject = TabBarItem(title: Constants.Controllers.TabTitle.Add,
+                                  imageName:Constants.Controllers.TabImage.Add)
+
     }
 
     override func viewDidLoad() {

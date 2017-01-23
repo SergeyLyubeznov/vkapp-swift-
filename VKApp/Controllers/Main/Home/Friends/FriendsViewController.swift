@@ -21,10 +21,9 @@ class FriendsViewController: BaseViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let tabBarItem = TabBarItem()
-        tabBarItem.title = "Друзья"
-        tabBarItem.imageName = "friends_tab_icon"
-        tabBarObject = tabBarItem
+        tabBarObject = TabBarItem(title: Constants.Controllers.TabTitle.Friends,
+                                  imageName:Constants.Controllers.TabImage.Friends)
+
     }
     
     override class func storyboardName() -> String {

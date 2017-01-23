@@ -11,6 +11,34 @@ import UIKit
 
 struct Constants {
     
+    struct Controllers {
+        
+        struct TabTitle {
+
+            static let Add = "Добавить"
+            static let Friends = "Друзья"
+            static let Settings = "Настройки"
+            static let Home = "Домой"
+            static let Messages = "Сообщения"
+            static let Profile = "Я"
+        }
+        
+        struct TabImage {
+            static let Add = "add_tab_icon"
+            static let Friends = "friends_tab_icon"
+            static let Settings = "settings_tab_icon"
+            static let Home = "home_tab_icon"
+            static let Messages = "messages_tab_icon"
+            static let Profile = "user_tab_icon"
+        }
+        
+        struct TabSelectedImage {
+            static let value = "_fill"
+        }
+        
+        
+    }
+    
     struct API {
         
         static let AppId = "4933789"

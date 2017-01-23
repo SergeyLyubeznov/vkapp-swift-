@@ -13,10 +13,8 @@ class SettingsViewController: BaseViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        let tabBarItem = TabBarItem()
-        tabBarItem.title = "Настройки"
-        tabBarItem.imageName = "settings_tab_icon"
-        tabBarObject = tabBarItem
+        tabBarObject = TabBarItem(title: Constants.Controllers.TabTitle.Settings,
+                                  imageName:Constants.Controllers.TabImage.Settings)
     }
     
     override func viewDidLoad() {
