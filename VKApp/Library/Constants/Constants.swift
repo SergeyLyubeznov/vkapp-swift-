@@ -11,6 +11,11 @@ import UIKit
 
 struct Constants {
     
+    struct Colors {
+        static let BarTintColor = "#000000"
+        static let TintColor = "#ffffff"
+    }
+    
     struct Controllers {
         
         struct TabTitle {
@@ -35,14 +40,12 @@ struct Constants {
         struct TabSelectedImage {
             static let value = "_fill"
         }
-        
-        
     }
     
     struct API {
         
         static let AppId = "4933789"
-        static let UserScope = "friends"
+        static let UserScope = "friends,offline"
         static let vkVersion = "5.8"
         static let BaseURL = "https://api.vk.com/method/"
         static let MyProfile = "account.getProfileInfo"
@@ -52,6 +55,15 @@ struct Constants {
         
         static let FriendsUserFields = "photo_100, last_seen"
         static let UserFields = "photo_id, verified, sex, bdate, city, counters, country, home_town, has_photo, photo_200, online, lists, domain, has_mobile, contacts, site, education, universities, schools, status, last_seen, followers_count, common_count, occupation, nickname, relatives, relation, personal, connections, exports, wall_comments, activities, interests, music, movies, tv, books, games, about, quotes, can_post, can_see_all_posts, can_see_audio, can_write_private_message, can_send_friend_request, is_favorite, is_hidden_from_feed, timezone, screen_name, maiden_name, is_friend, friend_status, career, military, blacklisted, blacklisted_by_me"
+    }
+    
+    struct Strings {
+        static let Online = "Онлайн"
+        static let Offline = "Оффлайн"
+        struct LastSeen {
+            static let Male = "Последний раз был"
+            static let Female = "Последний раз былв"
+        }
     }
 
 }

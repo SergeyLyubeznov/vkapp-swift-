@@ -18,8 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         UIApplication.shared.statusBarStyle = .lightContent
+        setupNavBar()
         
         return true
+    }
+    
+    private func setupNavBar() {
+    
+        let appearance = UINavigationBar.appearance()
+        
+        appearance.barTintColor = UIColor(hexString: Constants.Colors.BarTintColor)
+        appearance.tintColor = UIColor(hexString: Constants.Colors.TintColor)
+        
+        let titleTextAttributes = [NSForegroundColorAttributeName:UIColor(hexString: Constants.Colors.TintColor)]
+        appearance.titleTextAttributes = titleTextAttributes
+    
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

@@ -13,7 +13,7 @@
         <!--Friends View Controller-->
         <scene sceneID="DjP-8b-aN0">
             <objects>
-                <viewController storyboardIdentifier="FriendsViewController" id="Kq0-t9-1hJ" customClass="FriendsViewController" customModule="VKApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FriendsViewController" automaticallyAdjustsScrollViewInsets="NO" id="Kq0-t9-1hJ" customClass="FriendsViewController" customModule="VKApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HFW-rK-1dk"/>
                         <viewControllerLayoutGuide type="bottom" id="MpX-3P-icX"/>
@@ -22,36 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zch-vW-gJr">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YbR-wK-Hp6">
-                                        <rect key="frame" x="318" y="12" width="49" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bd0-4j-p0I">
-                                        <rect key="frame" x="8" y="8" width="49" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title=" Назад"/>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="wkn-Qe-fXS"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Go-48-ade">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendsCell" rowHeight="71" id="7uB-sA-udO" customClass="FriendsCell" customModule="VKApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="71"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7uB-sA-udO" id="UWV-Qg-1jC">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="71"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVV-Kj-tTi">
@@ -117,12 +96,9 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1Go-48-ade" firstAttribute="leading" secondItem="iRB-D5-qEh" secondAttribute="leading" id="6V0-YV-dXe"/>
-                            <constraint firstItem="Zch-vW-gJr" firstAttribute="top" secondItem="HFW-rK-1dk" secondAttribute="bottom" id="90G-0K-YDX"/>
-                            <constraint firstItem="Zch-vW-gJr" firstAttribute="leading" secondItem="iRB-D5-qEh" secondAttribute="leading" id="Gxu-R6-jaN"/>
                             <constraint firstItem="MpX-3P-icX" firstAttribute="top" secondItem="1Go-48-ade" secondAttribute="bottom" id="PH5-Yi-OCf"/>
-                            <constraint firstItem="1Go-48-ade" firstAttribute="top" secondItem="Zch-vW-gJr" secondAttribute="bottom" id="S4h-vD-RNr"/>
-                            <constraint firstAttribute="trailing" secondItem="Zch-vW-gJr" secondAttribute="trailing" id="YJS-YD-Vn9"/>
                             <constraint firstAttribute="trailing" secondItem="1Go-48-ade" secondAttribute="trailing" id="orP-Od-dTL"/>
+                            <constraint firstItem="1Go-48-ade" firstAttribute="top" secondItem="HFW-rK-1dk" secondAttribute="bottom" id="uD9-Ys-r4P"/>
                         </constraints>
                     </view>
                     <connections>
@@ -131,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYj-ec-Zey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="392.80000000000001" y="223.53823088455775"/>
+            <point key="canvasLocation" x="391" y="92"/>
         </scene>
     </scenes>
 </document>

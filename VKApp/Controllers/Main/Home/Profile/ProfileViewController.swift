@@ -14,8 +14,11 @@ class ProfileViewController: BaseViewController {
     
     var isMyProfile:Bool = false
     
+    weak var onlineLabel:UILabel?
+    
     var user:User? {
         didSet{
+            updateUI()
             tableView.reload()
         }
     }
@@ -43,6 +46,14 @@ class ProfileViewController: BaseViewController {
     
     private func setupController() {
         
+        let onlineLabel = UILabel(frame:CGRect(x:0,y:0,width:200,height:40))
+        onlineLabel.text = Constants.Strings.Offline
+        onlineLabel.textAlignment = NSTextAlignment.right
+        onlineLabel.textColor = UIColor(hexString:Constants.Colors.TintColor)
+        self.onlineLabel = onlineLabel
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: onlineLabel)
+        
         //navigationController?.navigationBar.isHidden = isMyProfile
     }
     
@@ -50,6 +61,24 @@ class ProfileViewController: BaseViewController {
         
         tableView.hideEmtyCells()
         tableView.enableAutolayout()
+    }
+    
+    private func updateUI() {
+        
+        guard let user = self.user else {
+            return
+        }
+        
+        if user.online {
+            onlineLabel?.text = Constants.Strings.Online
+        } else {
+            var text = (user.genderType == GenderType.male) ? Constants.Strings.LastSeen.Male :
+                Constants.Strings.LastSeen.Female
+            
+            text += (user.lastSeen?.time?.description)!
+            onlineLabel?.text = text
+        }
+        
     }
     
     private func loadProfile() {

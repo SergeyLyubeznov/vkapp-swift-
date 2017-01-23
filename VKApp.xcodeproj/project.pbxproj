@@ -58,6 +58,7 @@
 		2D98949B1E351914008105B4 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D98949A1E351914008105B4 /* test.storyboard */; };
 		2D98949D1E351FD0008105B4 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98949C1E351FD0008105B4 /* TestModel.swift */; };
 		2D98949F1E352E69008105B4 /* Dictionary + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98949E1E352E69008105B4 /* Dictionary + Utils.swift */; };
+		2D9894A11E36944F008105B4 /* UIColor + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894A01E36944F008105B4 /* UIColor + Utils.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -126,6 +127,7 @@
 		2D98949A1E351914008105B4 /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		2D98949C1E351FD0008105B4 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		2D98949E1E352E69008105B4 /* Dictionary + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary + Utils.swift"; sourceTree = "<group>"; };
+		2D9894A01E36944F008105B4 /* UIColor + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Utils.swift"; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -565,6 +567,7 @@
 				2D77F8AB1E2D779500BAA219 /* UITableView + Utils.swift */,
 				2D77F8B21E2D79A300BAA219 /* UIImage + Utils.swift */,
 				2D98949E1E352E69008105B4 /* Dictionary + Utils.swift */,
+				2D9894A01E36944F008105B4 /* UIColor + Utils.swift */,
 			);
 			path = "Base objects extensions";
 			sourceTree = "<group>";
@@ -781,6 +784,7 @@
 				2DE8E7B21E25448F002E64DB /* BaseAPI.swift in Sources */,
 				2D77F8C21E2DE77F00BAA219 /* Router.swift in Sources */,
 				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
+				2D9894A11E36944F008105B4 /* UIColor + Utils.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,
 				2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */,
 				2D77F85D1E25A0E400BAA219 /* ProfileViewController.swift in Sources */,
