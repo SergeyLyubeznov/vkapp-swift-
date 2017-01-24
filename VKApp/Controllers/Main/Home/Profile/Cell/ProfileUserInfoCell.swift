@@ -41,7 +41,7 @@ class ProfileUserInfoCell: BaseTableViewCell {
         
         lastSeenLabel.isHidden = user.online
         
-        if let lastSeen = user.lastSeen {
+        if user.lastSeen != nil {
             
             var text = (user.genderType == GenderType.male) ? Constants.Strings.LastSeen.Male : Constants.Strings.LastSeen.Female
             let date = user.stringDate()

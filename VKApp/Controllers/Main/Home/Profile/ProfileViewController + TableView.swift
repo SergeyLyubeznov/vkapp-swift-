@@ -80,14 +80,26 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
     
     private func showController(controllerType:ControllerType) {
         
-        var controller = Router.getController(controllerType: .friends)
+        var controller:BaseViewController = BaseViewController()
         
-        if controllerType == .friends {
-           let friendsController = controller as! FriendsViewController
+        switch controllerType {
+        case .friends,.mutualFriends,.onlineFriends:
+            controller = Router.getController(controllerType: .friends)
+            let friendsController = controller as! FriendsViewController
             friendsController.userID = (user?.id.description)!
             friendsController.isMyFriends = isMyProfile
+            
+            if controllerType == .onlineFriends {
+                friendsController.friendsType = .online
+            } else if controllerType == .mutualFriends {
+                friendsController.friendsType = .mutual
+            }
+
             controller = friendsController
+        default:
+            break
         }
+        
         navigationController?.pushViewController(controller, animated: true)
     }
     

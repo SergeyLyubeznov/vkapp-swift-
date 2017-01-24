@@ -10,7 +10,7 @@ import UIKit
 
 enum ControllerType:String {
     case friends = "Friends", news = "News", groups = "Groups",
-    profile = "Profile"
+    profile = "Profile", onlineFriends = "OnlineFriends", mutualFriends = "MutualFriends", followers = "Followers"
 }
 
 class Router: NSObject {

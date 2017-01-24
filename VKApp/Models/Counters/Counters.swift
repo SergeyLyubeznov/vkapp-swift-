@@ -21,8 +21,8 @@ class Counters: BaseModel {
     var groups:UInt = 0 {didSet{if groups > 0 {items.append(CounterItem(title:"Groups",name:"Группы",count:self.groups))}}}
     var gifts:UInt = 0 {didSet{if gifts > 0 {items.append(CounterItem(title:"Gifts",name:"Подарки",count:self.gifts))}}}
     var friends:UInt = 0 {didSet{if friends > 0 {items.append(CounterItem(title:"Friends",name:"Друзья",count:self.friends))}}}
-    var onlineFriends:UInt = 0 {didSet{if onlineFriends > 0 {items.append(CounterItem(title:"Online_friends",name:"Онлайн",count:self.onlineFriends))}}}
-    var mutualFriends:UInt = 0 {didSet{if mutualFriends > 0 {items.append(CounterItem(title:"Mutual_friends",name:"Общие",count:self.mutualFriends))}}}
+    var onlineFriends:UInt = 0 {didSet{if onlineFriends > 0 {items.append(CounterItem(title:"OnlineFriends",name:"Онлайн",count:self.onlineFriends))}}}
+    var mutualFriends:UInt = 0 {didSet{if mutualFriends > 0 {items.append(CounterItem(title:"MutualFriends",name:"Общие",count:self.mutualFriends))}}}
     var userPhotos:UInt = 0
     var userVideos:UInt = 0
     var followers:UInt = 0 {didSet{if followers > 0 {items.append(CounterItem(title:"Followers",name:"Подписчики",count:self.followers))}}}

@@ -19,7 +19,7 @@ class FriendsViewController: BaseViewController {
     
     var userID:String = "0"
     var isMyFriends:Bool = false
-    private var friendsType:FriendsType = .all
+    var friendsType:FriendsType = .all
     
     var friends:[User] = [] {
         didSet{
@@ -43,6 +43,10 @@ class FriendsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupController()
+        setupTableView()
+        
+        
         if isMyFriends {
             userID = AppManager.sharedInstance.accessToken.userId!
         }
@@ -50,9 +54,15 @@ class FriendsViewController: BaseViewController {
         loadFriends()
     }
     
+    private func setupController() {
+        
+       friendsSegmentedControl.selectedSegmentIndex = friendsType.rawValue
+    }
+    
     private func setupTableView() {
+        
         tableView.hideEmtyCells()
-         tableView.enableAutolayout()
+        tableView.enableAutolayout()
     }
     
     private func loadFriends() {
@@ -64,7 +74,7 @@ class FriendsViewController: BaseViewController {
     }
     
     @IBAction func segmentedValueChanged(sender:UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
+        
         friendsType = FriendsType(rawValue: sender.selectedSegmentIndex)!
         loadFriends()
     }

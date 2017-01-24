@@ -17,7 +17,7 @@ extension UITableView {
     
     func enableAutolayout() {
         rowHeight = UITableViewAutomaticDimension
-        estimatedRowHeight = 130.0
+        estimatedRowHeight = 44.0
     }
     
     func reload() {
