@@ -8,11 +8,18 @@
 
 import UIKit
 
+enum FriendsType:Int {
+    case all, online, mutual
+}
+
 class FriendsViewController: BaseViewController {
     
     @IBOutlet internal weak var tableView:UITableView!
+    @IBOutlet internal weak var friendsSegmentedControl:UISegmentedControl!
     
     var userID:String = "0"
+    var isMyFriends:Bool = false
+    private var friendsType:FriendsType = .all
     
     var friends:[User] = [] {
         didSet{
@@ -36,6 +43,10 @@ class FriendsViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if isMyFriends {
+            userID = AppManager.sharedInstance.accessToken.userId!
+        }
+        
         loadFriends()
     }
     
@@ -46,10 +57,16 @@ class FriendsViewController: BaseViewController {
     
     private func loadFriends() {
         
-        ApiManager.loadFriendsAt(userId: self.userID) { (friends) in
+        ApiManager.loadFriendsAt(userId: self.userID, friendsType:friendsType) { (friends) in
             guard let friends = friends else{return}
             self.friends = friends
         }
+    }
+    
+    @IBAction func segmentedValueChanged(sender:UISegmentedControl) {
+        print(sender.selectedSegmentIndex)
+        friendsType = FriendsType(rawValue: sender.selectedSegmentIndex)!
+        loadFriends()
     }
 
 }

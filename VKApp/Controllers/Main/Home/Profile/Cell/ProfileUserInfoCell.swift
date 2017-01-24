@@ -12,6 +12,7 @@ import SDWebImage
 class ProfileUserInfoCell: BaseTableViewCell {
 
     @IBOutlet weak var nameLabel:UILabel!
+    @IBOutlet weak var lastSeenLabel:UILabel!
     @IBOutlet weak var cityLabel:UILabel!
     @IBOutlet weak var bdayLabel:UILabel!
     @IBOutlet weak var statusLabel:UILabel!
@@ -36,6 +37,17 @@ class ProfileUserInfoCell: BaseTableViewCell {
         
         if let status = user.status {
             statusLabel.text = status
+        }
+        
+        lastSeenLabel.isHidden = user.online
+        
+        if let lastSeen = user.lastSeen {
+            
+            var text = (user.genderType == GenderType.male) ? Constants.Strings.LastSeen.Male : Constants.Strings.LastSeen.Female
+            let date = user.stringDate()
+            text += " \(date)"
+            lastSeenLabel?.text = text
+            
         }
         
         if let imageName = user.photo200 {

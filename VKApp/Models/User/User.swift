@@ -75,6 +75,11 @@ class User: BaseModel {
     func fullName() -> String {
         return String(format:"%@ %@",firstName!,lastName!)
     }
+    func stringDate() -> String {
+        
+        let date = Date(timeIntervalSince1970: (lastSeen?.time)!)
+        return date.stringDate()
+    }
     
     override func mapping(map: Map) {
         super.mapping(map: map)

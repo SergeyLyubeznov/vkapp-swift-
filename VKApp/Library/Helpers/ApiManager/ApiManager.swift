@@ -19,7 +19,6 @@ class ApiManager: NSObject {
                 let userId = AppManager.sharedInstance.accessToken.userId
                 profile.id = UInt(userId!)!
                 
-                
                 self.loadUserAt(userId: userId!, completion: { (user) in
                     if let user = user {
                         profile.user = user
@@ -46,14 +45,35 @@ class ApiManager: NSObject {
         }
     }
     
-    class func loadFriendsAt(userId:String,completion:@escaping (_ friends: [User]?) -> Void) {
+    class func loadFriendsAt(userId:String, friendsType:FriendsType, completion:@escaping (_ friends: [User]?) -> Void) {
         
-        let api = FriendsAPI()
-        api.object = userId as AnyObject?
-        api.startRequest { (data, error) in
-            if let friends = data as? [User] {
-                completion(friends)
+        switch friendsType {
+        case .all:
+            let api = FriendsAPI()
+            api.object = userId as AnyObject?
+            api.startRequest { (data, error) in
+                if let friends = data as? [User] {
+                    completion(friends)
+                }
             }
+        case .online:
+            let api = OnlineFriendsAPI()
+            api.object = userId as AnyObject?
+            api.startRequest { (data, error) in
+                if let friendsIds:String = data as? String {
+                    let api = UsersAPI()
+                    api.object = friendsIds as AnyObject?
+                    api.startRequest { (data, error) in
+                        if let users = data as? [User] {
+                            completion(users)
+                        }
+                    }
+                }
+            }
+        default:
+            break
         }
+        
     }
+    
 }

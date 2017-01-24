@@ -70,15 +70,7 @@ class ProfileViewController: BaseViewController {
             return
         }
         
-        if user.online {
-            onlineLabel?.text = Constants.Strings.Online
-        } else {
-            var text = (user.genderType == GenderType.male) ? Constants.Strings.LastSeen.Male :
-                Constants.Strings.LastSeen.Female
-            
-            text += (user.lastSeen?.time?.description)!
-            onlineLabel?.text = text
-        }
+        onlineLabel?.text = user.online ? Constants.Strings.Online : Constants.Strings.Offline
         
     }
     

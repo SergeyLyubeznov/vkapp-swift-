@@ -38,8 +38,8 @@ class MainViewController: UITabBarController {
         let settings = SettingsViewController.controller() as! BaseViewController
         let profile = ProfileViewController.controller() as! ProfileViewController
         profile.isMyProfile = true
-        let friends = FriendsViewController.controller() as! BaseViewController
-        
+        let friends = FriendsViewController.controller() as! FriendsViewController
+        friends.isMyFriends = true
         let navProfile = BaseNavigationController(rootViewController: profile)
         let homeProfile = BaseNavigationController(rootViewController: home)
         let addProfile = BaseNavigationController(rootViewController: add)

@@ -22,6 +22,8 @@ class BaseAPI: NSObject {
     var object:AnyObject?
     
     var addAccessToken = true
+    
+    internal var dataTask:URLSessionTask?
 
     public func startRequest(completion:@escaping (_ data: AnyObject?,_ error:Error?) -> Void) {
         
@@ -65,7 +67,7 @@ class BaseAPI: NSObject {
                 }
             }
         }
-        
+        self.dataTask = dataTask
         dataTask.resume()
     }
     

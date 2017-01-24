@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Go-48-ade">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FriendsCell" rowHeight="71" id="7uB-sA-udO" customClass="FriendsCell" customModule="VKApp" customModuleProvider="target">
@@ -92,22 +92,53 @@
                                     <outlet property="delegate" destination="Kq0-t9-1hJ" id="Wov-HB-uzU"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHa-IL-t7S">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Yn9-wk-Hw1">
+                                        <rect key="frame" x="93.5" y="8" width="188" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="MaQ-hU-IKH"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Друзья"/>
+                                            <segment title="Онлайн"/>
+                                            <segment title="Общие"/>
+                                        </segments>
+                                        <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="segmentedValueChangedWithSender:" destination="Kq0-t9-1hJ" eventType="valueChanged" id="mFx-DF-nsb"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Yn9-wk-Hw1" secondAttribute="bottom" constant="8" id="4Ja-mm-DTy"/>
+                                    <constraint firstItem="Yn9-wk-Hw1" firstAttribute="centerX" secondItem="GHa-IL-t7S" secondAttribute="centerX" id="I31-CS-bxf"/>
+                                    <constraint firstAttribute="height" constant="44" id="s65-Zf-wwd"/>
+                                    <constraint firstItem="Yn9-wk-Hw1" firstAttribute="top" secondItem="GHa-IL-t7S" secondAttribute="top" constant="8" id="yTd-S9-3OL"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1Go-48-ade" firstAttribute="leading" secondItem="iRB-D5-qEh" secondAttribute="leading" id="6V0-YV-dXe"/>
+                            <constraint firstItem="GHa-IL-t7S" firstAttribute="top" secondItem="HFW-rK-1dk" secondAttribute="bottom" id="BOH-yp-Kuf"/>
+                            <constraint firstItem="GHa-IL-t7S" firstAttribute="leading" secondItem="iRB-D5-qEh" secondAttribute="leading" id="Kza-JX-bFs"/>
                             <constraint firstItem="MpX-3P-icX" firstAttribute="top" secondItem="1Go-48-ade" secondAttribute="bottom" id="PH5-Yi-OCf"/>
+                            <constraint firstItem="1Go-48-ade" firstAttribute="top" secondItem="GHa-IL-t7S" secondAttribute="bottom" id="ctZ-vF-Anu"/>
+                            <constraint firstAttribute="trailing" secondItem="GHa-IL-t7S" secondAttribute="trailing" id="mvg-kk-E6D"/>
                             <constraint firstAttribute="trailing" secondItem="1Go-48-ade" secondAttribute="trailing" id="orP-Od-dTL"/>
-                            <constraint firstItem="1Go-48-ade" firstAttribute="top" secondItem="HFW-rK-1dk" secondAttribute="bottom" id="uD9-Ys-r4P"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="friendsSegmentedControl" destination="Yn9-wk-Hw1" id="COY-vO-jhR"/>
                         <outlet property="tableView" destination="1Go-48-ade" id="5Em-dZ-wRI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jYj-ec-Zey" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="92"/>
+            <point key="canvasLocation" x="389.60000000000002" y="91.304347826086968"/>
         </scene>
     </scenes>
 </document>

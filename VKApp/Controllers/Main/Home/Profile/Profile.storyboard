@@ -108,12 +108,24 @@
                                                     </constraints>
                                                     <state key="normal" backgroundImage="profile_add_friend_image"/>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lastSeen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h66-4C-MVw">
+                                                    <rect key="frame" x="321.5" y="5" width="45.5" height="14"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="29" id="bew-i8-ESV"/>
+                                                        <constraint firstAttribute="height" constant="14" id="fMd-ty-qeP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="sij-u0-faw" secondAttribute="trailing" constant="20" id="3LY-0k-0OF"/>
                                                 <constraint firstItem="kqe-bF-xmS" firstAttribute="width" secondItem="sij-u0-faw" secondAttribute="width" id="49R-6L-AwZ"/>
+                                                <constraint firstItem="h66-4C-MVw" firstAttribute="top" secondItem="eeO-Sy-7sv" secondAttribute="top" constant="5" id="4tV-VJ-rGp"/>
                                                 <constraint firstAttribute="bottom" secondItem="sij-u0-faw" secondAttribute="bottom" constant="8" id="6rB-7v-6bq"/>
+                                                <constraint firstAttribute="trailing" secondItem="h66-4C-MVw" secondAttribute="trailing" constant="8" id="Fel-8O-c74"/>
                                                 <constraint firstItem="iEY-DA-3rS" firstAttribute="leading" secondItem="eeO-Sy-7sv" secondAttribute="leading" constant="20" id="Fz6-3I-65W"/>
                                                 <constraint firstAttribute="trailing" secondItem="0qH-8U-OQg" secondAttribute="trailing" constant="8" id="GJE-t2-oxs"/>
                                                 <constraint firstItem="kqe-bF-xmS" firstAttribute="leading" secondItem="eeO-Sy-7sv" secondAttribute="leading" constant="20" id="HlS-jE-HC8"/>
@@ -121,6 +133,7 @@
                                                 <constraint firstItem="0Mt-DC-AjK" firstAttribute="leading" secondItem="iEY-DA-3rS" secondAttribute="trailing" constant="45" id="Lhy-0w-cvU"/>
                                                 <constraint firstItem="uJX-kR-S2s" firstAttribute="leading" secondItem="eeO-Sy-7sv" secondAttribute="leading" constant="20" id="Od2-fU-Tp2"/>
                                                 <constraint firstItem="0qH-8U-OQg" firstAttribute="top" secondItem="eeO-Sy-7sv" secondAttribute="top" constant="24" id="RDS-hP-2FL"/>
+                                                <constraint firstItem="0qH-8U-OQg" firstAttribute="top" secondItem="h66-4C-MVw" secondAttribute="bottom" constant="5" id="SNb-rP-FuK"/>
                                                 <constraint firstAttribute="trailing" secondItem="COl-JR-bMW" secondAttribute="trailing" constant="8" id="SUr-wS-fRE"/>
                                                 <constraint firstItem="iEY-DA-3rS" firstAttribute="top" secondItem="eeO-Sy-7sv" secondAttribute="top" constant="20" id="Sjd-Zu-J1M"/>
                                                 <constraint firstItem="sij-u0-faw" firstAttribute="leading" secondItem="kqe-bF-xmS" secondAttribute="trailing" constant="35" id="VPh-hb-VXd"/>
@@ -144,6 +157,7 @@
                                             <outlet property="backgroundImageView" destination="Qsj-w6-muo" id="Nvm-dt-gJS"/>
                                             <outlet property="bdayLabel" destination="COl-JR-bMW" id="ZW0-EZ-8fA"/>
                                             <outlet property="cityLabel" destination="0Mt-DC-AjK" id="9rT-SO-Qvh"/>
+                                            <outlet property="lastSeenLabel" destination="h66-4C-MVw" id="Otr-uC-dOy"/>
                                             <outlet property="nameLabel" destination="0qH-8U-OQg" id="wir-Zi-QA8"/>
                                             <outlet property="statusLabel" destination="uJX-kR-S2s" id="2Hw-HC-ViZ"/>
                                         </connections>

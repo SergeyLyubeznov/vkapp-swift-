@@ -85,6 +85,7 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
         if controllerType == .friends {
            let friendsController = controller as! FriendsViewController
             friendsController.userID = (user?.id.description)!
+            friendsController.isMyFriends = isMyProfile
             controller = friendsController
         }
         navigationController?.pushViewController(controller, animated: true)

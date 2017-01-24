@@ -59,6 +59,10 @@
 		2D98949D1E351FD0008105B4 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98949C1E351FD0008105B4 /* TestModel.swift */; };
 		2D98949F1E352E69008105B4 /* Dictionary + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D98949E1E352E69008105B4 /* Dictionary + Utils.swift */; };
 		2D9894A11E36944F008105B4 /* UIColor + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894A01E36944F008105B4 /* UIColor + Utils.swift */; };
+		2D9894A41E37BF88008105B4 /* OnlineFriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894A31E37BF88008105B4 /* OnlineFriendsAPI.swift */; };
+		2D9894A81E37D8B5008105B4 /* Array + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894A71E37D8B5008105B4 /* Array + Utils.swift */; };
+		2D9894AB1E37DE0E008105B4 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894AA1E37DE0E008105B4 /* UsersAPI.swift */; };
+		2D9894AD1E37E701008105B4 /* Date + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894AC1E37E701008105B4 /* Date + Utils.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -128,6 +132,10 @@
 		2D98949C1E351FD0008105B4 /* TestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
 		2D98949E1E352E69008105B4 /* Dictionary + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary + Utils.swift"; sourceTree = "<group>"; };
 		2D9894A01E36944F008105B4 /* UIColor + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor + Utils.swift"; sourceTree = "<group>"; };
+		2D9894A31E37BF88008105B4 /* OnlineFriendsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnlineFriendsAPI.swift; sourceTree = "<group>"; };
+		2D9894A71E37D8B5008105B4 /* Array + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array + Utils.swift"; sourceTree = "<group>"; };
+		2D9894AA1E37DE0E008105B4 /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		2D9894AC1E37E701008105B4 /* Date + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + Utils.swift"; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -294,6 +302,8 @@
 		2D77F8821E268A2F00BAA219 /* GET */ = {
 			isa = PBXGroup;
 			children = (
+				2D9894A91E37DDFC008105B4 /* UsersAPI */,
+				2D9894A21E37BF71008105B4 /* OnlineUsersAPI */,
 				2D77F8C51E2E68CC00BAA219 /* FriendsAPI */,
 				2D77F89B1E27D1BF00BAA219 /* UserAPI */,
 				2D77F8851E26A30300BAA219 /* MyProfileAPI */,
@@ -424,6 +434,22 @@
 				2D98949C1E351FD0008105B4 /* TestModel.swift */,
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		2D9894A21E37BF71008105B4 /* OnlineUsersAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2D9894A31E37BF88008105B4 /* OnlineFriendsAPI.swift */,
+			);
+			path = OnlineUsersAPI;
+			sourceTree = "<group>";
+		};
+		2D9894A91E37DDFC008105B4 /* UsersAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2D9894AA1E37DE0E008105B4 /* UsersAPI.swift */,
+			);
+			path = UsersAPI;
 			sourceTree = "<group>";
 		};
 		2DE8E76A1E250195002E64DB = {
@@ -563,11 +589,13 @@
 		2DE8E7AD1E253305002E64DB /* Base objects extensions */ = {
 			isa = PBXGroup;
 			children = (
+				2D9894A71E37D8B5008105B4 /* Array + Utils.swift */,
 				2D77F83A1E25752300BAA219 /* UIViewController + Utils.swift */,
 				2D77F8AB1E2D779500BAA219 /* UITableView + Utils.swift */,
 				2D77F8B21E2D79A300BAA219 /* UIImage + Utils.swift */,
 				2D98949E1E352E69008105B4 /* Dictionary + Utils.swift */,
 				2D9894A01E36944F008105B4 /* UIColor + Utils.swift */,
+				2D9894AC1E37E701008105B4 /* Date + Utils.swift */,
 			);
 			path = "Base objects extensions";
 			sourceTree = "<group>";
@@ -754,6 +782,7 @@
 				2D77F8971E26F02800BAA219 /* Country.swift in Sources */,
 				2D77F8BE1E2DB08700BAA219 /* CounterView.swift in Sources */,
 				2D77F8B11E2D797800BAA219 /* BackgroundPhotoView.swift in Sources */,
+				2D9894AD1E37E701008105B4 /* Date + Utils.swift in Sources */,
 				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
 				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
 				2D77F8951E26EFDB00BAA219 /* City.swift in Sources */,
@@ -761,6 +790,7 @@
 				2D77F8A21E29AE5700BAA219 /* ProfileUserInfoCell.swift in Sources */,
 				2D77F8591E25A0BA00BAA219 /* DialoguesViewController.swift in Sources */,
 				2D77F8C71E2E68E100BAA219 /* FriendsAPI.swift in Sources */,
+				2D9894A41E37BF88008105B4 /* OnlineFriendsAPI.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
 				2D77F8CC1E2E717900BAA219 /* FriendsCell.swift in Sources */,
@@ -773,6 +803,7 @@
 				2D9894991E351909008105B4 /* TestViewController.swift in Sources */,
 				2D77F87B1E267AAF00BAA219 /* AccessToken.swift in Sources */,
 				2DE8E7B71E255363002E64DB /* AuthViewController.swift in Sources */,
+				2D9894AB1E37DE0E008105B4 /* UsersAPI.swift in Sources */,
 				2D77F8AC1E2D779500BAA219 /* UITableView + Utils.swift in Sources */,
 				2D77F87C1E267AAF00BAA219 /* TabBarItem.swift in Sources */,
 				2D77F8A41E29AE8800BAA219 /* BaseTableViewCell.swift in Sources */,
@@ -785,6 +816,7 @@
 				2D77F8C21E2DE77F00BAA219 /* Router.swift in Sources */,
 				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
 				2D9894A11E36944F008105B4 /* UIColor + Utils.swift in Sources */,
+				2D9894A81E37D8B5008105B4 /* Array + Utils.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,
 				2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */,
 				2D77F85D1E25A0E400BAA219 /* ProfileViewController.swift in Sources */,
