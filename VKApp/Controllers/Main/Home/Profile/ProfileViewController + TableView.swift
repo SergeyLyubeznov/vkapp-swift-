@@ -68,8 +68,10 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
                 weak var this = self
                 counterCell.pressedCounter = {(title) in
                     
-                    let vcType = ControllerType(rawValue: title)
-                    this?.showController(controllerType: vcType!)
+                    guard let vcType = ControllerType(rawValue: title) else {
+                        return
+                    }
+                    this?.showController(controllerType: vcType)
                 }
             default: break
                 //

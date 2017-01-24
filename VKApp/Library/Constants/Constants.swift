@@ -57,6 +57,7 @@ struct Constants {
         static let MyProfile = "account.getProfileInfo"
         static let GetUser = "users.get"
         static let GetOnlineFriends = "friends.getOnline"
+        static let GetMutualFriends = "friends.getMutual"
         static let GetFriends = "friends.get"
         
         

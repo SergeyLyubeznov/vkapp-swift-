@@ -70,8 +70,20 @@ class ApiManager: NSObject {
                     }
                 }
             }
-        default:
-            break
+        case .mutual:
+            let api = MutualFriendsAPI()
+            api.object = userId as AnyObject?
+            api.startRequest { (data, error) in
+                if let friendsIds:String = data as? String {
+                    let api = UsersAPI()
+                    api.object = friendsIds as AnyObject?
+                    api.startRequest { (data, error) in
+                        if let users = data as? [User] {
+                            completion(users)
+                        }
+                    }
+                }
+            }
         }
         
     }

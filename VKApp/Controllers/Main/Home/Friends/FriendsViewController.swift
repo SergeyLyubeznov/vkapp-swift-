@@ -45,18 +45,18 @@ class FriendsViewController: BaseViewController {
         
         setupController()
         setupTableView()
-        
-        
-        if isMyFriends {
-            userID = AppManager.sharedInstance.accessToken.userId!
-        }
-        
         loadFriends()
     }
     
     private func setupController() {
         
-       friendsSegmentedControl.selectedSegmentIndex = friendsType.rawValue
+        friendsSegmentedControl.selectedSegmentIndex = friendsType.rawValue
+        
+        if isMyFriends {
+            userID = AppManager.sharedInstance.accessToken.userId!
+            friendsSegmentedControl.removeSegment(at: 2, animated: false)
+        }
+
     }
     
     private func setupTableView() {

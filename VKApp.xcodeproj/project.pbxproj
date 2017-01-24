@@ -63,6 +63,7 @@
 		2D9894A81E37D8B5008105B4 /* Array + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894A71E37D8B5008105B4 /* Array + Utils.swift */; };
 		2D9894AB1E37DE0E008105B4 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894AA1E37DE0E008105B4 /* UsersAPI.swift */; };
 		2D9894AD1E37E701008105B4 /* Date + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9894AC1E37E701008105B4 /* Date + Utils.swift */; };
+		2DB982471E381BF200E96C4D /* MutualFriendsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB982461E381BF200E96C4D /* MutualFriendsAPI.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -136,6 +137,7 @@
 		2D9894A71E37D8B5008105B4 /* Array + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array + Utils.swift"; sourceTree = "<group>"; };
 		2D9894AA1E37DE0E008105B4 /* UsersAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		2D9894AC1E37E701008105B4 /* Date + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date + Utils.swift"; sourceTree = "<group>"; };
+		2DB982461E381BF200E96C4D /* MutualFriendsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutualFriendsAPI.swift; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		2D77F8821E268A2F00BAA219 /* GET */ = {
 			isa = PBXGroup;
 			children = (
+				2DB982451E381BCB00E96C4D /* MutualFriendsAPI */,
 				2D9894A91E37DDFC008105B4 /* UsersAPI */,
 				2D9894A21E37BF71008105B4 /* OnlineUsersAPI */,
 				2D77F8C51E2E68CC00BAA219 /* FriendsAPI */,
@@ -450,6 +453,14 @@
 				2D9894AA1E37DE0E008105B4 /* UsersAPI.swift */,
 			);
 			path = UsersAPI;
+			sourceTree = "<group>";
+		};
+		2DB982451E381BCB00E96C4D /* MutualFriendsAPI */ = {
+			isa = PBXGroup;
+			children = (
+				2DB982461E381BF200E96C4D /* MutualFriendsAPI.swift */,
+			);
+			path = MutualFriendsAPI;
 			sourceTree = "<group>";
 		};
 		2DE8E76A1E250195002E64DB = {
@@ -784,6 +795,7 @@
 				2D77F8B11E2D797800BAA219 /* BackgroundPhotoView.swift in Sources */,
 				2D9894AD1E37E701008105B4 /* Date + Utils.swift in Sources */,
 				2D77F8371E256EA200BAA219 /* AuthManager.swift in Sources */,
+				2DB982471E381BF200E96C4D /* MutualFriendsAPI.swift in Sources */,
 				2D77F83B1E25752300BAA219 /* UIViewController + Utils.swift in Sources */,
 				2D77F8951E26EFDB00BAA219 /* City.swift in Sources */,
 				2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */,
