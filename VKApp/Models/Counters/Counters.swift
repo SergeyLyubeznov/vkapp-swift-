@@ -32,9 +32,9 @@ class Counters: BaseModel {
     override func mapping(map: Map) {
         
         friends <- map["friends"]
+        followers <- map["followers"]
         onlineFriends <- map["online_friends"]
         mutualFriends <- map["mutual_friends"]
-        followers <- map["followers"]
         photos <- map["photos"]
         videos <- map["videos"]
         audios <- map["audios"]
