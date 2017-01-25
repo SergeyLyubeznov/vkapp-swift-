@@ -24,6 +24,10 @@ class FriendsViewController: BaseViewController {
     var friends:[User] = [] {
         didSet{
             tableView.reload()
+            
+            if friends.count > 0 {
+                tableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: true)
+            }
         }
     }
 
