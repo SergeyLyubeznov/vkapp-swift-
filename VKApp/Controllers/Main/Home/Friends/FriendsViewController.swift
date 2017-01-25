@@ -66,8 +66,9 @@ class FriendsViewController: BaseViewController {
     }
     
     private func loadFriends() {
-        
+        showActivityIndicator()
         ApiManager.loadFriendsAt(userId: self.userID, friendsType:friendsType) { (friends) in
+            self.hideActivityIndicator()
             guard let friends = friends else{return}
             self.friends = friends
         }

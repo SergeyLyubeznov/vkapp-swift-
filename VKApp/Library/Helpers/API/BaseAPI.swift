@@ -78,9 +78,6 @@ class BaseAPI: NSObject {
                 self.completion?(data,nil)
             }
         }
-
-        
-        
     }
     
     func apiDidReturnError(error:Error) {

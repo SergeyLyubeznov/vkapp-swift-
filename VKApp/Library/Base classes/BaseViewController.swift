@@ -10,6 +10,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    internal var activiryIndicator:UIActivityIndicatorView?
+    
     var tabBarObject: TabBarItem?
 
     override func viewDidLoad() {

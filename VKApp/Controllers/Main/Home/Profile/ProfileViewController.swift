@@ -75,8 +75,9 @@ class ProfileViewController: BaseViewController {
     }
     
     private func loadProfile() {
-        
+        showActivityIndicator()
         ApiManager.loadProfile { (profile) in
+            self.hideActivityIndicator()
             self.user = profile?.user
         }
     }
@@ -84,8 +85,9 @@ class ProfileViewController: BaseViewController {
     private func loadUser() {
         
         let userId:String = (user?.id.description)!
-        
+        showActivityIndicator()
         ApiManager.loadUserAt(userId:userId, completion: { (user) in
+            self.hideActivityIndicator()
             if let user = user {
                 self.user = user
             }
