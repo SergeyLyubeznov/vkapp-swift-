@@ -19,6 +19,7 @@ class ProfileViewController: BaseViewController {
     var user:User? {
         didSet{
             if let tableView = tableView {
+                loadPhotos()
                 updateUI()
                 tableView.reload()
             }
@@ -76,7 +77,7 @@ class ProfileViewController: BaseViewController {
     
     private func loadProfile() {
         showActivityIndicator()
-        ApiManager.loadProfile { (profile) in
+        APIManager.loadProfile { (profile) in
             self.hideActivityIndicator()
             self.user = profile?.user
         }
@@ -86,12 +87,22 @@ class ProfileViewController: BaseViewController {
         
         let userId:String = (user?.id.description)!
         showActivityIndicator()
-        ApiManager.loadUserAt(userId:userId, completion: { (user) in
+        APIManager.loadUserAt(userId:userId, completion: { (user) in
             self.hideActivityIndicator()
             if let user = user {
                 self.user = user
             }
         })
+    }
+    
+    private func loadPhotos() {
+        let userId:String = (user?.id.description)!
+        APIManager.loadPhotosAt(userId: userId) { (photos) in
+            if let photos = photos {
+                self.user?.photos = photos
+                self.tableView.reload()
+            }
+        }
     }
     
     override class func storyboardName() -> String {

@@ -9,19 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Obt-th-KJR">
-            <objects>
-                <navigationController id="MCd-zk-18c" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BP9-Ja-GLf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XmX-0V-Am3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-910" y="-178"/>
-        </scene>
         <!--Profile View Controller-->
         <scene sceneID="HRa-jY-0Rq">
             <objects>
@@ -42,7 +29,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="210"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t2y-z0-vRA" id="eeO-Sy-7sv">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="210"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qsj-w6-muo" customClass="BackgroundPhotoView" customModule="VKApp" customModuleProvider="target">
@@ -166,7 +153,7 @@
                                         <rect key="frame" x="0.0" y="238" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U9g-xY-8Lm" id="qc8-gb-bhC">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CA-al-mTI" customClass="CounterView" customModule="VKApp" customModuleProvider="target">
@@ -261,6 +248,61 @@
                                             <outlet property="counterViewSecond" destination="fD4-LR-e7M" id="XDv-uS-sH3"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ProfilePhotosCell" rowHeight="44" id="gsp-UD-Gk9" customClass="ProfilePhotosCell" customModule="VKApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="282" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gsp-UD-Gk9" id="oST-ka-KAa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="DCp-1L-H93">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="c03-oS-Z16">
+                                                        <size key="itemSize" width="44" height="44"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProfilePhotoCell" id="N4J-cV-msh" customClass="ProfilePhotoCell" customModule="VKApp" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="-1" width="44" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enc-Co-Pmd">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                                    </imageView>
+                                                                </subviews>
+                                                            </view>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="enc-Co-Pmd" secondAttribute="bottom" id="4yA-iq-ooD"/>
+                                                                <constraint firstItem="enc-Co-Pmd" firstAttribute="leading" secondItem="N4J-cV-msh" secondAttribute="leading" id="RdN-Z0-M2p"/>
+                                                                <constraint firstItem="enc-Co-Pmd" firstAttribute="top" secondItem="N4J-cV-msh" secondAttribute="top" id="cLK-qk-VCZ"/>
+                                                                <constraint firstAttribute="trailing" secondItem="enc-Co-Pmd" secondAttribute="trailing" id="pFv-jd-yJ1"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="photoImageView" destination="enc-Co-Pmd" id="P6w-28-hey"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="DCp-1L-H93" firstAttribute="leading" secondItem="oST-ka-KAa" secondAttribute="leading" id="56w-zf-mkf"/>
+                                                <constraint firstItem="DCp-1L-H93" firstAttribute="top" secondItem="oST-ka-KAa" secondAttribute="top" id="eM5-8u-eNE"/>
+                                                <constraint firstAttribute="bottom" secondItem="DCp-1L-H93" secondAttribute="bottom" id="fGg-d6-9Pr"/>
+                                                <constraint firstAttribute="trailing" secondItem="DCp-1L-H93" secondAttribute="trailing" id="vaD-ER-Cca"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="collectionView" destination="DCp-1L-H93" id="qIP-CK-3wh"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="dUI-xm-w7V" id="ZTC-vM-v6t"/>
@@ -283,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kna-u7-PPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="-177"/>
+            <point key="canvasLocation" x="-127.2" y="-177.66116941529236"/>
         </scene>
     </scenes>
     <resources>

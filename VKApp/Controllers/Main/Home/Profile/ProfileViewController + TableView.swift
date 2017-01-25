@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-internal let ProfileCellIdentifiers = ["ProfileUserInfoCell","ProfleCounterCell"]
+internal let ProfileCellIdentifiers = ["ProfileUserInfoCell","ProfleCounterCell","ProfilePhotosCell"]
+
+internal let ProfileSectionNames = ["","Статистика","Фотографии"]
 
 enum ProfileCellIdentifier:Int {
     case userInfo = 0, counter = 1
@@ -48,7 +50,18 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
             }
         }
         
+        if user != nil {
+            
+            if (user?.hasPhotos)! {
+                sections += 1
+            }
+        }
+        
         return sections;
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return ProfileSectionNames[section]
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,7 +72,7 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
         if let user = self.user {
             
             switch indexPath.section {
-            case 0:cell?.object = user
+            case 0,2:cell?.object = user
             case 1:
                 guard let counterCell = cell as? ProfleCounterCell else {
                     break

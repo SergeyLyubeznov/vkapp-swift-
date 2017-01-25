@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ApiManager: NSObject {
+class APIManager: NSObject {
     
     class func loadProfile(completion:@escaping (_ profile: Profile?) -> Void) {
         
@@ -41,6 +41,17 @@ class ApiManager: NSObject {
             
             if let user = array.first {
                 completion(user)
+            }
+        }
+    }
+    
+    class func loadPhotosAt(userId:String, completion:@escaping (_ friends: [Photo]?) -> Void) {
+        
+        let api = PhotosAPI()
+        api.object = userId as AnyObject?
+        api.startRequest { (data, error) in
+            if let photos = data as? [Photo] {
+                completion(photos)
             }
         }
     }
@@ -85,7 +96,5 @@ class ApiManager: NSObject {
                 }
             }
         }
-        
     }
-    
 }

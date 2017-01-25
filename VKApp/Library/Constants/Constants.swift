@@ -51,7 +51,7 @@ struct Constants {
     struct API {
         
         static let AppId = "4933789"
-        static let UserScope = "friends,offline"
+        static let UserScopePermissions = "friends,offline,photos"
         static let vkVersion = "5.8"
         static let BaseURL = "https://api.vk.com/method/"
         static let MyProfile = "account.getProfileInfo"

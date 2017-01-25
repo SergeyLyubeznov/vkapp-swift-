@@ -13,7 +13,7 @@ class AuthManager: NSObject {
         let request = { () -> URLRequest in
     
         let appId = Constants.API.AppId
-        let scope = Constants.API.UserScope
+        let scope = Constants.API.UserScopePermissions
         let version = Constants.API.vkVersion
         
         let stringUrl = "https://oauth.vk.com/authorize?client_id="+appId+"&display=page&redirect_uri=https://oauth.vk.com/blank.html&scope="+scope+"&response_type=token&v="+version;
