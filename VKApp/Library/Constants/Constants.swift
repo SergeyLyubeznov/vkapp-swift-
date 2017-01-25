@@ -59,6 +59,7 @@ struct Constants {
         static let GetOnlineFriends = "friends.getOnline"
         static let GetMutualFriends = "friends.getMutual"
         static let GetFriends = "friends.get"
+        static let GetAllPhotos = "photos.getAll"
         
         
         static let FriendsUserFields = "photo_100, last_seen, online"

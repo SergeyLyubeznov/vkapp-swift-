@@ -20,6 +20,13 @@ enum GenderType:Int {
 
 class User: BaseModel {
     
+    var photos:[Photo] = [] {
+        didSet{
+            hasPhotos = photos.count > 0
+        }
+    }
+    var hasPhotos:Bool = false
+    
     var firstName:String?
     var lastName:String?
     var maidenName:String?

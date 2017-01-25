@@ -40,8 +40,8 @@ class FriendsAPI: BaseAPI {
         
         let items = data["response"] as! [String : Any]
         
-        if let user = Mapper<User>().mapArray(JSONArray: items["items"] as! [[String:Any]]) {
-            super.apiDidReturnData(data: user as AnyObject)
+        if let friends = Mapper<User>().mapArray(JSONArray: items["items"] as! [[String:Any]]) {
+            super.apiDidReturnData(data: friends as AnyObject)
         }
         super.apiDidReturnData(data: data)
     }
