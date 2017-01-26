@@ -24,6 +24,17 @@ struct Constants {
     
     struct Controllers {
         
+        struct NavTitle {
+            
+            static let Add = "Добавить"
+            static let Friends = "Друзья"
+            static let Settings = "Настройки"
+            static let Home = "Домой"
+            static let Messages = "Сообщения"
+            static let Profile = "Я"
+            static let Photos = "Фотографии"
+        }
+        
         struct TabTitle {
 
             static let Add = "Добавить"

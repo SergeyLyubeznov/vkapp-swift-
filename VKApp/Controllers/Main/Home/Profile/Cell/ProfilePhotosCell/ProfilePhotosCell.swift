@@ -13,6 +13,7 @@ class ProfilePhotosCell: BaseTableViewCell {
     @IBOutlet weak var collectionView:UICollectionView!
     
     internal var photos:[Photo] = [Photo]()
+    var pressedPhoto: ((_ photo:Photo) -> (Void))?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,13 +50,23 @@ extension ProfilePhotosCell:UICollectionViewDelegate, UICollectionViewDataSource
         
         let cell:BaseCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! BaseCollectionViewCell
         
-        cell.object = itemAt(indexPath: indexPath)
+        guard let photoCell = cell as? ProfilePhotoCell else {
+            return cell
+        }
+       
+        weak var this = self
+        photoCell.pressedPhoto = {(photo) in
+            if this?.pressedPhoto != nil {
+                this?.pressedPhoto!(photo)
+            }
+        }
+        cell.object = photoAt(indexPath: indexPath)
         
         return cell
         
     }
 
-    private func itemAt(indexPath:IndexPath) -> Photo {
+    private func photoAt(indexPath:IndexPath) -> Photo {
         return photos[indexPath.row]
     }
 

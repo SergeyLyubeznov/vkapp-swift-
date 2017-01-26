@@ -13,7 +13,7 @@ class ProfleCounterCell: BaseTableViewCell {
     @IBOutlet weak var counterViewFirst:CounterView!
     @IBOutlet weak var counterViewSecond:CounterView!
     
-     var pressedCounter: ((_ string:String) -> (Void))?
+    var pressedCounter: ((_ string:String) -> (Void))?
     
     override func awakeFromNib() {
         super.awakeFromNib()

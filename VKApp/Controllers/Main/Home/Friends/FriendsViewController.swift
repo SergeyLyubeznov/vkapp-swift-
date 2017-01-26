@@ -39,11 +39,6 @@ class FriendsViewController: BaseViewController {
 
     }
     
-    override class func storyboardName() -> String {
-        // override method for other storyboard names
-        return "Friends"
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +50,7 @@ class FriendsViewController: BaseViewController {
     private func setupController() {
         
         friendsSegmentedControl.selectedSegmentIndex = friendsType.rawValue
+        navigationItem.title = Constants.Controllers.NavTitle.Friends
         
         if isMyFriends {
             userID = AppManager.sharedInstance.accessToken.userId!
@@ -76,6 +72,11 @@ class FriendsViewController: BaseViewController {
             guard let friends = friends else{return}
             self.friends = friends
         }
+    }
+    
+    override class func storyboardName() -> String {
+        // override method for other storyboard names
+        return "Friends"
     }
     
     @IBAction func segmentedValueChanged(sender:UISegmentedControl) {

@@ -72,20 +72,33 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
         if let user = self.user {
             
             switch indexPath.section {
-            case 0,2:cell?.object = user
+            case 0:cell?.object = user
             case 1:
                 guard let counterCell = cell as? ProfleCounterCell else {
                     break
                 }
-                counterCell.object = counterItemsAt(indexPath: indexPath)
+                counterCell.object = counterItemAt(indexPath: indexPath)
                 weak var this = self
                 counterCell.pressedCounter = {(title) in
-                    
                     guard let vcType = ControllerType(rawValue: title) else {
                         return
                     }
                     this?.showController(controllerType: vcType)
                 }
+            case 2:
+                guard let photosCell = cell as? ProfilePhotosCell else {
+                    break
+                }
+                photosCell.object = user
+                weak var this = self
+                photosCell.pressedPhoto = {(photo) in
+                guard let vcType = ControllerType(rawValue: "Photos") else {
+                      return
+                    }
+                    this?.showController(controllerType: vcType)
+                }
+
+
             default: break
                 //
             }
@@ -111,6 +124,12 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
             }
 
             controller = friendsController
+            
+        case .photos:
+            controller = Router.getController(controllerType: .photos)
+            let photosController = controller as! PhotosViewController
+            photosController.photos = (user?.photos)!
+            controller = photosController
         default:
             break
         }
@@ -118,7 +137,7 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(controller, animated: true)
     }
     
-    private func counterItemsAt(indexPath:IndexPath) -> [CounterItem] {
+    private func counterItemAt(indexPath:IndexPath) -> [CounterItem] {
         
         var resultItems:[CounterItem] = []
         

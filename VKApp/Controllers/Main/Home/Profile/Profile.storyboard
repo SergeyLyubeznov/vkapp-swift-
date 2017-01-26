@@ -278,6 +278,12 @@
                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enc-Co-Pmd">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                                             </imageView>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxz-c5-O33">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                                                <connections>
+                                                                                    <action selector="photoButtonPresedWithSender:" destination="N4J-cV-msh" eventType="touchUpInside" id="nl9-I6-eqC"/>
+                                                                                </connections>
+                                                                            </button>
                                                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bQf-EB-cGv">
                                                                                 <rect key="frame" x="12" y="12" width="20" height="20"/>
                                                                                 <constraints>
@@ -294,9 +300,13 @@
                                                                             <constraint firstItem="enc-Co-Pmd" firstAttribute="top" secondItem="J8X-13-FpC" secondAttribute="top" id="HDh-UH-uSu"/>
                                                                             <constraint firstItem="enc-Co-Pmd" firstAttribute="leading" secondItem="J8X-13-FpC" secondAttribute="leading" id="KHO-wW-8QT"/>
                                                                             <constraint firstItem="bQf-EB-cGv" firstAttribute="top" secondItem="J8X-13-FpC" secondAttribute="top" constant="12" id="MDA-Mn-TZF"/>
+                                                                            <constraint firstItem="mxz-c5-O33" firstAttribute="top" secondItem="J8X-13-FpC" secondAttribute="top" id="Qul-IR-OVY"/>
+                                                                            <constraint firstItem="mxz-c5-O33" firstAttribute="leading" secondItem="J8X-13-FpC" secondAttribute="leading" id="SgX-Rd-2R9"/>
                                                                             <constraint firstAttribute="bottom" secondItem="enc-Co-Pmd" secondAttribute="bottom" id="T0E-uC-4QI"/>
                                                                             <constraint firstAttribute="trailing" secondItem="enc-Co-Pmd" secondAttribute="trailing" id="Yfm-8r-LFZ"/>
                                                                             <constraint firstAttribute="trailing" secondItem="bQf-EB-cGv" secondAttribute="trailing" constant="12" id="aa6-TZ-RWx"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="mxz-c5-O33" secondAttribute="bottom" id="gcH-cl-Tvq"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="mxz-c5-O33" secondAttribute="trailing" id="rbT-Cs-6Fh"/>
                                                                         </constraints>
                                                                     </view>
                                                                 </subviews>
@@ -351,6 +361,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kna-u7-PPi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-127.2" y="-177.66116941529236"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kKg-hP-80J">
+            <objects>
+                <viewController id="otA-rU-BtN" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rDo-MN-OJJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="bXd-sg-IKs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rQc-fZ-x3j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hlf-Qb-ALp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="756" y="-178"/>
         </scene>
     </scenes>
     <resources>

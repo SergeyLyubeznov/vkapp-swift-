@@ -17,7 +17,7 @@ class Counters: BaseModel {
     var videos:UInt = 0 {didSet{if videos > 0 {items.append(CounterItem(title:"Video",name:"Видео",count:self.videos))}}}
     var audios:UInt = 0 {didSet{if audios > 0 {items.append(CounterItem(title:"Audio",name:"Аудио",count:self.audios))}}}
     var notes:UInt = 0
-    var photos:UInt = 0 {didSet{if photos > 0 {items.append(CounterItem(title:"Photo",name:"Фото",count:self.photos))}}}
+    var photos:UInt = 0 {didSet{if photos > 0 {items.append(CounterItem(title:"Photos",name:"Фото",count:self.photos))}}}
     var groups:UInt = 0 {didSet{if groups > 0 {items.append(CounterItem(title:"Groups",name:"Группы",count:self.groups))}}}
     var gifts:UInt = 0 {didSet{if gifts > 0 {items.append(CounterItem(title:"Gifts",name:"Подарки",count:self.gifts))}}}
     var friends:UInt = 0 {didSet{if friends > 0 {items.append(CounterItem(title:"Friends",name:"Друзья",count:self.friends))}}}

@@ -1,28 +1,25 @@
 //
-//  ProfilePhotoCell.swift
+//  PhotoCell.swift
 //  VKApp
 //
-//  Created by Sergey Lyubeznov on 25/01/2017.
+//  Created by Sergey Lyubeznov on 26/01/2017.
 //  Copyright © 2017 Sergey Lyubeznov. All rights reserved.
 //
 
 import UIKit
-import SDWebImage
 
-class ProfilePhotoCell: BaseCollectionViewCell {
+class PhotoCell: BaseCollectionViewCell {
 
     @IBOutlet weak var photoImageView:UIImageView!
     @IBOutlet weak var activityIndicator:UIActivityIndicatorView!
     
-    var pressedPhoto: ((_ photo:Photo) -> (Void))?
-    
     override func updateUI() {
-        
+     
         guard let photo = object as? Photo else {
             return
         }
         
-        if let imageName = photo.preview {
+        if let imageName = photo.original {
             photoImageView.image = nil
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
@@ -30,12 +27,6 @@ class ProfilePhotoCell: BaseCollectionViewCell {
                 self.photoImageView.image = image
                 self.activityIndicator.stopAnimating()
             })
-        }
-    }
-    
-    @IBAction func photoButtonPresed(sender:UIButton) {
-        if pressedPhoto != nil {
-            pressedPhoto!(object as! Photo)
         }
     }
 }
