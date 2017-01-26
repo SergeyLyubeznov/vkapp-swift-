@@ -13,7 +13,7 @@ class ProfilePhotosCell: BaseTableViewCell {
     @IBOutlet weak var collectionView:UICollectionView!
     
     internal var photos:[Photo] = [Photo]()
-    var pressedPhoto: ((_ photo:Photo) -> (Void))?
+    var pressedPhoto: ((_ index:Int) -> (Void))?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -55,12 +55,13 @@ extension ProfilePhotosCell:UICollectionViewDelegate, UICollectionViewDataSource
         }
        
         weak var this = self
-        photoCell.pressedPhoto = {(photo) in
+        photoCell.pressedPhoto = {(index) in
             if this?.pressedPhoto != nil {
-                this?.pressedPhoto!(photo)
+                this?.pressedPhoto!(index)
             }
         }
         cell.object = photoAt(indexPath: indexPath)
+        cell.indexPath = indexPath
         
         return cell
         

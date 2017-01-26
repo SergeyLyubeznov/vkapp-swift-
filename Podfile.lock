@@ -1,4 +1,5 @@
 PODS:
+  - ImageViewer (4.0)
   - ObjectMapper (2.0.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -6,15 +7,17 @@ PODS:
   - SwiftyUserDefaults (3.0.0)
 
 DEPENDENCIES:
+  - ImageViewer (~> 4.0)
   - ObjectMapper
   - SDWebImage (~> 3.8)
   - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
+  ImageViewer: 364abc0309c33dda86d08ca25b0243e5c67d8cd3
   ObjectMapper: aed2570edabbd3c9b26c939e1cabdb6558f933e0
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyUserDefaults: 0f1d45fc3aafb9064dac661e367f8f83fe21a4b4
 
-PODFILE CHECKSUM: d2b930135f913f35d4451692b56de45ee103eb74
+PODFILE CHECKSUM: 824a817888ced62ee3f32b302bcc94ab7b5124b8
 
 COCOAPODS: 1.1.1

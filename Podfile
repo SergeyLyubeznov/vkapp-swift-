@@ -9,5 +9,6 @@ target 'VKApp' do
   pod 'SwiftyUserDefaults'
   pod 'ObjectMapper'
   pod 'SDWebImage', '~> 3.8'
+  pod 'ImageViewer', '~> 4.0'
 
 end

@@ -91,19 +91,24 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
                 }
                 photosCell.object = user
                 weak var this = self
-                photosCell.pressedPhoto = {(photo) in
-                guard let vcType = ControllerType(rawValue: "Photos") else {
-                      return
-                    }
-                    this?.showController(controllerType: vcType)
+                photosCell.pressedPhoto = {(index) in
+                    this?.showPhotosController(index:index)
                 }
-
 
             default: break
                 //
             }
         }
         return cell!
+    }
+    
+    private func showPhotosController(index:Int) {
+    
+       let controller = Router.getController(controllerType: .photos) as! PhotosViewController
+        controller.photos = (user?.photos)!
+        controller.startIndex = index
+        
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     private func showController(controllerType:ControllerType) {
@@ -126,10 +131,7 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
             controller = friendsController
             
         case .photos:
-            controller = Router.getController(controllerType: .photos)
-            let photosController = controller as! PhotosViewController
-            photosController.photos = (user?.photos)!
-            controller = photosController
+            showPhotosController(index: 0)
         default:
             break
         }

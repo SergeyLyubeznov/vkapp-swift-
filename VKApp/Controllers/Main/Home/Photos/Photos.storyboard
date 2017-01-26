@@ -99,5 +99,50 @@
             </objects>
             <point key="canvasLocation" x="170" y="-427"/>
         </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="zbJ-Ub-xnP">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailViewController" id="Jc7-Yh-0Xp" customClass="PhotoDetailViewController" customModule="VKApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ena-PA-FXZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="k3f-ia-tJE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6ts-ZY-fSC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-Wy-RPz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-PI-gAu">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="EDK-PI-gAu" firstAttribute="centerX" secondItem="Wtk-Wy-RPz" secondAttribute="centerX" id="BdF-rW-hY6"/>
+                                    <constraint firstAttribute="trailing" secondItem="EDK-PI-gAu" secondAttribute="trailing" id="HK8-xH-4Ci"/>
+                                    <constraint firstItem="EDK-PI-gAu" firstAttribute="leading" secondItem="Wtk-Wy-RPz" secondAttribute="leading" id="KTg-9R-aI1"/>
+                                    <constraint firstItem="EDK-PI-gAu" firstAttribute="top" secondItem="Wtk-Wy-RPz" secondAttribute="top" id="NdK-uq-7o5"/>
+                                    <constraint firstItem="EDK-PI-gAu" firstAttribute="centerY" secondItem="Wtk-Wy-RPz" secondAttribute="centerY" id="Z4Z-jV-ojH"/>
+                                    <constraint firstAttribute="bottom" secondItem="EDK-PI-gAu" secondAttribute="bottom" id="h6P-Sk-K1p"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Wtk-Wy-RPz" secondAttribute="trailing" id="8HX-Nm-73Q"/>
+                            <constraint firstItem="Wtk-Wy-RPz" firstAttribute="top" secondItem="ena-PA-FXZ" secondAttribute="bottom" id="CgD-KL-elu"/>
+                            <constraint firstItem="Wtk-Wy-RPz" firstAttribute="leading" secondItem="6ts-ZY-fSC" secondAttribute="leading" id="aGh-XU-Mo7"/>
+                            <constraint firstItem="k3f-ia-tJE" firstAttribute="top" secondItem="Wtk-Wy-RPz" secondAttribute="bottom" id="vCv-Bc-sKY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="EDK-PI-gAu" id="7vn-a7-2nr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mne-2c-bVl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="964" y="-427.73613193403304"/>
+        </scene>
     </scenes>
 </document>

@@ -14,7 +14,7 @@ class ProfilePhotoCell: BaseCollectionViewCell {
     @IBOutlet weak var photoImageView:UIImageView!
     @IBOutlet weak var activityIndicator:UIActivityIndicatorView!
     
-    var pressedPhoto: ((_ photo:Photo) -> (Void))?
+    var pressedPhoto: ((_ index:Int) -> (Void))?
     
     override func updateUI() {
         
@@ -35,7 +35,7 @@ class ProfilePhotoCell: BaseCollectionViewCell {
     
     @IBAction func photoButtonPresed(sender:UIButton) {
         if pressedPhoto != nil {
-            pressedPhoto!(object as! Photo)
+            pressedPhoto!((indexPath?.row)!)
         }
     }
 }
