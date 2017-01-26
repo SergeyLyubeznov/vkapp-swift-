@@ -113,7 +113,7 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
     
     private func showController(controllerType:ControllerType) {
         
-        var controller:BaseViewController = BaseViewController()
+        var controller:BaseViewController? = BaseViewController()
         
         switch controllerType {
         case .friends,.mutualFriends,.onlineFriends:
@@ -132,11 +132,13 @@ extension ProfileViewController:UITableViewDelegate, UITableViewDataSource {
             
         case .photos:
             showPhotosController(index: 0)
+            controller = nil
+            return
         default:
             break
         }
         
-        navigationController?.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller!, animated: true)
     }
     
     private func counterItemAt(indexPath:IndexPath) -> [CounterItem] {

@@ -27,6 +27,7 @@ class ProfilePhotoCell: BaseCollectionViewCell {
             activityIndicator.isHidden = false
             activityIndicator.startAnimating()
             ImageManager.loadImageAt(url: URL(string:imageName)!, completion: { (image) in
+                photo.image = image
                 self.photoImageView.image = image
                 self.activityIndicator.stopAnimating()
             })

@@ -29,9 +29,20 @@ class PhotosGallery: GalleryItemsDatasource {
         
         let photo = photos[index]
         var galleryItem: GalleryItem!
+        
+        
         if photo.image != nil {
             galleryItem = GalleryItem.image{($0(photo.image))}
+            
+        } else {
+            galleryItem = GalleryItem.image(fetchImageBlock: { (image) in
+                ImageManager.loadImageAt(url: URL(string:photo.original!)!,
+                                         completion: { (imageOriginal) in
+                                            image(imageOriginal)
+                })
+            })
         }
+        
         return galleryItem
     }
     

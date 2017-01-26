@@ -24,7 +24,7 @@ class Photo: BaseModel, Observable {
             }
         }
     }
-    
+
     override func mapping(map: Map) {
         super.mapping(map: map)
         
@@ -34,14 +34,6 @@ class Photo: BaseModel, Observable {
         original <- map["photo_1280"]
         
     }
-    
-    static func == (lhs: Photo, rhs: Photo) -> Bool {
-        return  lhs.preview == rhs.preview &&
-            lhs.original == rhs.original &&
-            lhs.image == rhs.image
-    }
-    
-    
     
     func addObserver(observer:ObserverObject) {
         observers.append(observer)

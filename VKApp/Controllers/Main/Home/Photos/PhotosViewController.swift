@@ -67,6 +67,7 @@ extension PhotosViewController: Observer {
         }
         photo.removeAllObservers()
         showPhotosGalleryAt(startIndex: startIndex)
+        startIndex = 0
     }
 }
 
