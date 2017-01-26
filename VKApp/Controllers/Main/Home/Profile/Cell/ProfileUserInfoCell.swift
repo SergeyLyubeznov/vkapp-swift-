@@ -51,14 +51,9 @@ class ProfileUserInfoCell: BaseTableViewCell {
         }
         
         if let imageName = user.photo200 {
-            let downloader = SDWebImageDownloader.shared()
-            downloader?.downloadImage(with: URL(string:imageName), options:SDWebImageDownloaderOptions.useNSURLCache,
-                                      progress: nil, completed: { (image, data, error, result) in
-                                        
-                                        DispatchQueue.main.async {
-                                            self.backgroundImageView.image = image
-                                            self.avatarImageView.image = image
-                                        }
+            ImageManager.loadImageAt(url: URL(string:imageName)!, completion: { (image) in
+                self.backgroundImageView.image = image
+                self.avatarImageView.image = image
             })
         }
     }

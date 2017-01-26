@@ -70,6 +70,8 @@
 		2DB982571E3943BA00E96C4D /* ProfilePhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB982561E3943BA00E96C4D /* ProfilePhotoCell.swift */; };
 		2DB9825A1E39443C00E96C4D /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB982591E39443C00E96C4D /* Photo.swift */; };
 		2DB9825D1E394C5000E96C4D /* PhotosAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9825C1E394C5000E96C4D /* PhotosAPI.swift */; };
+		2DB982601E3A029400E96C4D /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB9825F1E3A029400E96C4D /* ImageManager.swift */; };
+		2DB982621E3A03EC00E96C4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB982611E3A03EC00E96C4D /* Utils.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -150,6 +152,8 @@
 		2DB982561E3943BA00E96C4D /* ProfilePhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilePhotoCell.swift; sourceTree = "<group>"; };
 		2DB982591E39443C00E96C4D /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		2DB9825C1E394C5000E96C4D /* PhotosAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosAPI.swift; sourceTree = "<group>"; };
+		2DB9825F1E3A029400E96C4D /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		2DB982611E3A03EC00E96C4D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -511,6 +515,14 @@
 			path = PhotosAPI;
 			sourceTree = "<group>";
 		};
+		2DB9825E1E3A028800E96C4D /* ImageManager */ = {
+			isa = PBXGroup;
+			children = (
+				2DB9825F1E3A029400E96C4D /* ImageManager.swift */,
+			);
+			path = ImageManager;
+			sourceTree = "<group>";
+		};
 		2DE8E76A1E250195002E64DB = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +641,7 @@
 		2DE8E7AB1E253305002E64DB /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2DB9825E1E3A028800E96C4D /* ImageManager */,
 				2D77F88F1E26B3B900BAA219 /* APIManager */,
 				2D77F8711E263AEA00BAA219 /* AppManager */,
 				2D77F8351E256E8D00BAA219 /* AuthManager */,
@@ -658,6 +671,7 @@
 				2D98949E1E352E69008105B4 /* Dictionary + Utils.swift */,
 				2D9894A01E36944F008105B4 /* UIColor + Utils.swift */,
 				2D9894AC1E37E701008105B4 /* Date + Utils.swift */,
+				2DB982611E3A03EC00E96C4D /* Utils.swift */,
 			);
 			path = "Base objects extensions";
 			sourceTree = "<group>";
@@ -884,9 +898,11 @@
 				2D77F8C21E2DE77F00BAA219 /* Router.swift in Sources */,
 				2DB982491E38220900E96C4D /* BaseViewController + ActivityIndicator.swift in Sources */,
 				2D77F8731E263AF900BAA219 /* AppManager.swift in Sources */,
+				2DB982601E3A029400E96C4D /* ImageManager.swift in Sources */,
 				2D9894A11E36944F008105B4 /* UIColor + Utils.swift in Sources */,
 				2D9894A81E37D8B5008105B4 /* Array + Utils.swift in Sources */,
 				2D77F85B1E25A0D000BAA219 /* NewsViewController.swift in Sources */,
+				2DB982621E3A03EC00E96C4D /* Utils.swift in Sources */,
 				2D77F8871E26A31100BAA219 /* MyProfileAPI.swift in Sources */,
 				2D77F85D1E25A0E400BAA219 /* ProfileViewController.swift in Sources */,
 				2D77F8541E259F8700BAA219 /* SettingsViewController.swift in Sources */,

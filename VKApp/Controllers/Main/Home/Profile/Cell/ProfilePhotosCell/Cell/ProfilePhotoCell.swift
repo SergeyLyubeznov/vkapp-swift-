@@ -12,6 +12,7 @@ import SDWebImage
 class ProfilePhotoCell: BaseCollectionViewCell {
 
     @IBOutlet weak var photoImageView:UIImageView!
+    @IBOutlet weak var activityIndicator:UIActivityIndicatorView!
     
     override func updateUI() {
         
@@ -20,13 +21,12 @@ class ProfilePhotoCell: BaseCollectionViewCell {
         }
         
         if let imageName = photo.preview {
-            let downloader = SDWebImageDownloader.shared()
-            downloader?.downloadImage(with: URL(string:imageName), options:SDWebImageDownloaderOptions.useNSURLCache,
-                                      progress: nil, completed: { (image, data, error, result) in
-                                        
-                                        DispatchQueue.main.async {
-                                            self.photoImageView.image = image
-                                        }
+            photoImageView.image = nil
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            ImageManager.loadImageAt(url: URL(string:imageName)!, completion: { (image) in
+                self.photoImageView.image = image
+                self.activityIndicator.stopAnimating()
             })
         }
     }

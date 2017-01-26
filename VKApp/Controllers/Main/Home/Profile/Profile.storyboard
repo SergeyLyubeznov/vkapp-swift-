@@ -272,18 +272,43 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enc-Co-Pmd">
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J8X-13-FpC">
                                                                         <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
-                                                                    </imageView>
+                                                                        <subviews>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="enc-Co-Pmd">
+                                                                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                                                            </imageView>
+                                                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="bQf-EB-cGv">
+                                                                                <rect key="frame" x="12" y="12" width="20" height="20"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="width" constant="20" id="LFO-qa-bMz"/>
+                                                                                    <constraint firstAttribute="height" constant="20" id="RaQ-Hg-pFv"/>
+                                                                                </constraints>
+                                                                                <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </activityIndicatorView>
+                                                                        </subviews>
+                                                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="bottom" secondItem="bQf-EB-cGv" secondAttribute="bottom" constant="12" id="1d4-cr-hcc"/>
+                                                                            <constraint firstItem="bQf-EB-cGv" firstAttribute="leading" secondItem="J8X-13-FpC" secondAttribute="leading" constant="12" id="Cjf-Cv-s2s"/>
+                                                                            <constraint firstItem="enc-Co-Pmd" firstAttribute="top" secondItem="J8X-13-FpC" secondAttribute="top" id="HDh-UH-uSu"/>
+                                                                            <constraint firstItem="enc-Co-Pmd" firstAttribute="leading" secondItem="J8X-13-FpC" secondAttribute="leading" id="KHO-wW-8QT"/>
+                                                                            <constraint firstItem="bQf-EB-cGv" firstAttribute="top" secondItem="J8X-13-FpC" secondAttribute="top" constant="12" id="MDA-Mn-TZF"/>
+                                                                            <constraint firstAttribute="bottom" secondItem="enc-Co-Pmd" secondAttribute="bottom" id="T0E-uC-4QI"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="enc-Co-Pmd" secondAttribute="trailing" id="Yfm-8r-LFZ"/>
+                                                                            <constraint firstAttribute="trailing" secondItem="bQf-EB-cGv" secondAttribute="trailing" constant="12" id="aa6-TZ-RWx"/>
+                                                                        </constraints>
+                                                                    </view>
                                                                 </subviews>
                                                             </view>
                                                             <constraints>
-                                                                <constraint firstAttribute="bottom" secondItem="enc-Co-Pmd" secondAttribute="bottom" id="4yA-iq-ooD"/>
-                                                                <constraint firstItem="enc-Co-Pmd" firstAttribute="leading" secondItem="N4J-cV-msh" secondAttribute="leading" id="RdN-Z0-M2p"/>
-                                                                <constraint firstItem="enc-Co-Pmd" firstAttribute="top" secondItem="N4J-cV-msh" secondAttribute="top" id="cLK-qk-VCZ"/>
-                                                                <constraint firstAttribute="trailing" secondItem="enc-Co-Pmd" secondAttribute="trailing" id="pFv-jd-yJ1"/>
+                                                                <constraint firstAttribute="bottom" secondItem="J8X-13-FpC" secondAttribute="bottom" id="SHF-aP-uMS"/>
+                                                                <constraint firstItem="J8X-13-FpC" firstAttribute="top" secondItem="N4J-cV-msh" secondAttribute="top" id="a4C-gK-WZ0"/>
+                                                                <constraint firstAttribute="trailing" secondItem="J8X-13-FpC" secondAttribute="trailing" id="a8T-hS-y0x"/>
+                                                                <constraint firstItem="J8X-13-FpC" firstAttribute="leading" secondItem="N4J-cV-msh" secondAttribute="leading" id="jlr-4E-aMR"/>
                                                             </constraints>
                                                             <connections>
+                                                                <outlet property="activityIndicator" destination="bQf-EB-cGv" id="koD-lc-3K3"/>
                                                                 <outlet property="photoImageView" destination="enc-Co-Pmd" id="P6w-28-hey"/>
                                                             </connections>
                                                         </collectionViewCell>

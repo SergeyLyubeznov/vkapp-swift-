@@ -14,6 +14,7 @@ class FriendsCell: BaseTableViewCell {
     @IBOutlet weak var nameLabel:UILabel!
     @IBOutlet weak var onineView:UIView!
     @IBOutlet weak var avatarImageView:UIImageView!
+    @IBOutlet weak var activityIndicator:UIActivityIndicatorView!
     
     override func updateUI() {
         
@@ -25,13 +26,14 @@ class FriendsCell: BaseTableViewCell {
         onineView.isHidden = !user.online
         
         if let imageName = user.photo100 {
-            let downloader = SDWebImageDownloader.shared()
-            downloader?.downloadImage(with: URL(string:imageName), options:SDWebImageDownloaderOptions.useNSURLCache,
-                                      progress: nil, completed: { (image, data, error, result) in
-                                        
-                                        DispatchQueue.main.async {
-                                            self.avatarImageView.image = image
-                                        }
+            
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            avatarImageView.image = nil
+            
+            ImageManager.loadImageAt(url: URL(string:imageName)!, completion: { (image) in
+                self.avatarImageView.image = image
+                self.activityIndicator.stopAnimating()
             })
         }
     }
