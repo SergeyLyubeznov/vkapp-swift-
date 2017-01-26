@@ -10,8 +10,8 @@ import UIKit
 
 class ProfleCounterCell: BaseTableViewCell {
     
-    @IBOutlet weak var counterViewFirst:CounterView!
-    @IBOutlet weak var counterViewSecond:CounterView!
+    @IBOutlet weak var counterViewFirst:ProfileCounterView!
+    @IBOutlet weak var counterViewSecond:ProfileCounterView!
     
     var pressedCounter: ((_ string:String) -> (Void))?
     
@@ -23,7 +23,7 @@ class ProfleCounterCell: BaseTableViewCell {
         
     }
     
-    private func addClosureAt(counterView:CounterView) {
+    private func addClosureAt(counterView:ProfileCounterView) {
         counterView.pressedCounter = {(title) in
             if self.pressedCounter != nil {
                 self.pressedCounter!(title)

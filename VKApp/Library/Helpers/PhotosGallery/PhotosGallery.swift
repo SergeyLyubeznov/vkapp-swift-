@@ -17,7 +17,30 @@ class PhotosGallery: GalleryItemsDatasource {
     
     var controller:GalleryViewController? {
             get {
-                return GalleryViewController.init(startIndex: startIdex, itemsDatasource: self, displacedViewsDatasource: nil, configuration: galleryConfiguration())
+                
+                let galleryViewController = GalleryViewController.init(startIndex: startIdex, itemsDatasource: self, displacedViewsDatasource: nil, configuration: galleryConfiguration())
+                
+                let frame = CGRect(x: 0, y: 0, width: 200, height: 24)
+                //let headerView = CounterView(frame: frame, currentIndex: startIdex, count: photos.count)
+                let footerView = CounterView(frame: frame, currentIndex: startIdex, count: photos.count)
+               // galleryViewController.headerView = headerView
+                galleryViewController.footerView = footerView
+                galleryViewController.launchedCompletion = { print("LAUNCHED") }
+                galleryViewController.closedCompletion = { print("CLOSED") }
+                galleryViewController.swipedToDismissCompletion = { print("SWIPE-DISMISSED") }
+                
+                galleryViewController.landedPageAtIndexCompletion = { index in
+                    
+                    print("LANDED AT INDEX: \(index)")
+                    
+                   // headerView.count = self.photos.count
+                   // headerView.currentIndex = index
+                    footerView.count = self.photos.count
+                    footerView.currentIndex = index
+                }
+                
+                
+                return galleryViewController
             }
     }
     
@@ -48,16 +71,18 @@ class PhotosGallery: GalleryItemsDatasource {
     
     func galleryConfiguration() -> GalleryConfiguration {
         
+        let button = UIButton.init(frame: CGRect(x:0,y:0,width:80,height:50))
+            //button.backgroundColor = UIColor.orange
+            button.setTitle("Закрыть", for: .normal)
+        
         return [
             
-            GalleryConfigurationItem.closeButtonMode(.builtIn),
+            GalleryConfigurationItem.closeButtonMode(.custom(button)),
+            GalleryConfigurationItem.thumbnailsButtonMode(.none),
             
             GalleryConfigurationItem.pagingMode(.standard),
             GalleryConfigurationItem.presentationStyle(.displacement),
             GalleryConfigurationItem.hideDecorationViewsOnLaunch(false),
-            
-            //GalleryConfigurationItem.swipeToDismissMode(.vertical),
-           // GalleryConfigurationItem.toggleDecorationViewsBySingleTap(false),
             
             GalleryConfigurationItem.overlayColor(UIColor(white: 0.035, alpha: 1)),
             GalleryConfigurationItem.overlayColorOpacity(1),

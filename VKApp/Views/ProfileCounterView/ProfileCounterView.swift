@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CounterView: UIView {
+class ProfileCounterView: UIView {
 
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var countLabel:UILabel!
@@ -21,7 +21,7 @@ class CounterView: UIView {
         super.awakeFromNib()
         
         let button = UIButton()
-        button.addTarget(self, action: #selector(CounterView.buttonPressed), for: .touchUpInside)
+        button.addTarget(self, action: #selector(ProfileCounterView.buttonPressed), for: .touchUpInside)
         addSubview(button)
         
         NSLayoutConstraint(item: button, attribute: .leading, relatedBy: .equal, toItem: self,
