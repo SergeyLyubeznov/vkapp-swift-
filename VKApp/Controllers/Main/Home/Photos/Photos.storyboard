@@ -24,7 +24,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NDP-cX-EOj">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xen-dG-HjU">
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xen-dG-HjU">
                                     <size key="itemSize" width="100" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -41,17 +41,27 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2B-CI-asG">
                                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Yl-Fd-HeF">
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Yl-Fd-HeF">
                                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
-                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="g53-6q-DQD">
+                                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="g53-6q-DQD">
                                                             <rect key="frame" x="40" y="40" width="20" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="4qS-Iu-eWY"/>
+                                                                <constraint firstAttribute="width" constant="20" id="abi-IS-7rB"/>
+                                                            </constraints>
                                                             <color key="color" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         </activityIndicatorView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="4Yl-Fd-HeF" secondAttribute="trailing" id="3Ah-ns-wZE"/>
+                                                        <constraint firstItem="4Yl-Fd-HeF" firstAttribute="top" secondItem="P2B-CI-asG" secondAttribute="top" id="3hk-vP-DtV"/>
+                                                        <constraint firstItem="g53-6q-DQD" firstAttribute="centerX" secondItem="P2B-CI-asG" secondAttribute="centerX" id="HQh-1t-Jst"/>
+                                                        <constraint firstAttribute="bottom" secondItem="4Yl-Fd-HeF" secondAttribute="bottom" id="Hbf-SB-pi6"/>
+                                                        <constraint firstItem="g53-6q-DQD" firstAttribute="centerY" secondItem="P2B-CI-asG" secondAttribute="centerY" id="nh5-GG-YnS"/>
+                                                        <constraint firstItem="4Yl-Fd-HeF" firstAttribute="leading" secondItem="P2B-CI-asG" secondAttribute="leading" id="ujU-dy-Jio"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                         </view>
@@ -87,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BBL-m6-cxL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="158" y="-358"/>
+            <point key="canvasLocation" x="170" y="-427"/>
         </scene>
     </scenes>
 </document>

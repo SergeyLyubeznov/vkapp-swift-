@@ -8,6 +8,8 @@
 
 import UIKit
 
+let itemsInRow:CGFloat = 3
+
 class PhotosViewController: BaseViewController {
     
     @IBOutlet weak var collectionView:UICollectionView!
@@ -39,7 +41,16 @@ class PhotosViewController: BaseViewController {
 
 }
 
-extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension PhotosViewController: UICollectionViewDelegate, UICollectionViewDataSource,
+UICollectionViewDelegateFlowLayout {
+    
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let availableWidth = view.frame.width
+        let widthPerItem = availableWidth / itemsInRow
+        
+        return CGSize(width: widthPerItem, height: widthPerItem)
+    }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
