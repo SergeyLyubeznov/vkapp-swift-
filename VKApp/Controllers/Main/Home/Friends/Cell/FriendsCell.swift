@@ -32,7 +32,7 @@ class FriendsCell: BaseTableViewCell {
             avatarImageView.image = nil
             
             ImageManager.loadImageAt(url: URL(string:imageName)!, completion: { (image) in
-                self.avatarImageView.image = image
+                self.avatarImageView.display(image: image!, isAnimation: true)
                 self.activityIndicator.stopAnimating()
             })
         }

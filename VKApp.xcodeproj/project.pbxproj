@@ -80,6 +80,7 @@
 		2DC8FA941E3A8C5A00F10DD1 /* ObserverObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8FA931E3A8C5A00F10DD1 /* ObserverObject.swift */; };
 		2DC8FA981E3AB99E00F10DD1 /* ProfileCounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8FA971E3AB99E00F10DD1 /* ProfileCounterView.swift */; };
 		2DC8FA9A1E3AB9BA00F10DD1 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8FA991E3AB9BA00F10DD1 /* CounterView.swift */; };
+		2DC8FA9C1E3AC6CE00F10DD1 /* UIImageView + Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC8FA9B1E3AC6CE00F10DD1 /* UIImageView + Utils.swift */; };
 		2DE8E7961E2504EA002E64DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE8E7891E2504EA002E64DB /* AppDelegate.swift */; };
 		2DE8E7971E2504EA002E64DB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E78A1E2504EA002E64DB /* Info.plist */; };
 		2DE8E7991E2504EA002E64DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DE8E7901E2504EA002E64DB /* Assets.xcassets */; };
@@ -170,6 +171,7 @@
 		2DC8FA931E3A8C5A00F10DD1 /* ObserverObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverObject.swift; sourceTree = "<group>"; };
 		2DC8FA971E3AB99E00F10DD1 /* ProfileCounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCounterView.swift; sourceTree = "<group>"; };
 		2DC8FA991E3AB9BA00F10DD1 /* CounterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		2DC8FA9B1E3AC6CE00F10DD1 /* UIImageView + Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView + Utils.swift"; sourceTree = "<group>"; };
 		2DE8E7891E2504EA002E64DB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DE8E78A1E2504EA002E64DB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE8E7901E2504EA002E64DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -744,6 +746,7 @@
 				2D9894A01E36944F008105B4 /* UIColor + Utils.swift */,
 				2D9894AC1E37E701008105B4 /* Date + Utils.swift */,
 				2DB982611E3A03EC00E96C4D /* Utils.swift */,
+				2DC8FA9B1E3AC6CE00F10DD1 /* UIImageView + Utils.swift */,
 			);
 			path = "Base objects extensions";
 			sourceTree = "<group>";
@@ -945,6 +948,7 @@
 				2D77F8591E25A0BA00BAA219 /* DialoguesViewController.swift in Sources */,
 				2D77F8C71E2E68E100BAA219 /* FriendsAPI.swift in Sources */,
 				2D9894A41E37BF88008105B4 /* OnlineFriendsAPI.swift in Sources */,
+				2DC8FA9C1E3AC6CE00F10DD1 /* UIImageView + Utils.swift in Sources */,
 				2D77F8641E25A64500BAA219 /* MainViewController.swift in Sources */,
 				2DE8E7B01E253315002E64DB /* Constants.swift in Sources */,
 				2D77F8CC1E2E717900BAA219 /* FriendsCell.swift in Sources */,

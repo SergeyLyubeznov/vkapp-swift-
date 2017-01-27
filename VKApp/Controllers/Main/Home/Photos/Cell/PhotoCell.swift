@@ -27,10 +27,11 @@ class PhotoCell: BaseCollectionViewCell {
         
         
         if photo.image != nil {
-            photoImageView.image = photo.image
+            photoImageView.display(image: photo.image!, isAnimation: true)
             loadImage(imageName: photo.original!,photo:photo, completion: {_ in
             self.activityIndicator.stopAnimating()})
         } else {
+            photoImageView.image = nil
             activityIndicator.isHidden = false
             loadImage(imageName: photo.preview!,photo:photo, completion: { (image) in
                 self.activityIndicator.stopAnimating()
@@ -43,8 +44,9 @@ class PhotoCell: BaseCollectionViewCell {
 
         ImageManager.loadImageAt(url: URL(string:imageName)!, completion: { (image) in
             photo.image = image
-            self.photoImageView.image = image
-                completion(image)
+            let animation = self.photoImageView.image == nil
+            self.photoImageView.display(image:image!, isAnimation: animation)
+            completion(image)
         })
     }
 }

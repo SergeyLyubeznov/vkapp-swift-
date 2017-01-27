@@ -50,10 +50,10 @@ class ProfileUserInfoCell: BaseTableViewCell {
             
         }
         
-        if let imageName = user.photo200 {
-            ImageManager.loadImageAt(url: URL(string:imageName)!, completion: { (image) in
-                self.backgroundImageView.image = image
-                self.avatarImageView.image = image
+        if (user.photo200 != nil) && avatarImageView.image == nil {
+            ImageManager.loadImageAt(url: URL(string:user.photo200!)!, completion: { (image) in
+                self.avatarImageView.display(image:image!, isAnimation: true)
+                self.backgroundImageView.display(image:image!, isAnimation: true)
             })
         }
     }

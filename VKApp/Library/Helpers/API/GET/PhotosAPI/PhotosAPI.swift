@@ -21,6 +21,7 @@ class PhotosAPI: BaseAPI {
         
         var param = super.parameters()
         param["owner_id"] = userId
+        param["count"] = Constants.API.PhotosCount
         
         return param
     }
